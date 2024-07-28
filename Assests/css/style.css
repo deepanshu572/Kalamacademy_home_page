@@ -21,7 +21,7 @@ body{
 .kalam_navbar{
     position: fixed;
     width: 100%;
-    
+    z-index: 9;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,6 +44,7 @@ body{
 .kalam_right_img_section {
     width: 400px;
     height: 400px;
+    z-index: 1;
 }
 .kalam_right_img_section img {
     width: 100%;
@@ -51,6 +52,7 @@ body{
     object-fit: contain;
 }
 .kalam_left_text_section{
+    z-index: 1;
     width: 398px;
     display: flex;
     flex-direction: column;
@@ -66,10 +68,22 @@ body{
     padding: 2rem 0px;
 }
 .kalam_left_bg{
-    display: none;
+  position: relative;
+}
+.kalam_left_bg img{
+    position: absolute;
+    top: -150px;
+    width: 281px;
+    left: 146px;
 }
 .kalam_right_bg{
-    display: none;
+   position: relative;
+}
+.kalam_right_bg img{
+    position: absolute;
+    top: -368px;
+    width: 281px;
+    left: -426px;
 }
 .kalam_left_text_section p{
     font-weight: 500;
@@ -253,7 +267,7 @@ body{
 }
 .kalam_right_para{
     background: var(--theme-color);
-    padding: 3px 14px;
+    padding: 7px 14px;
     color: #fff;
     border-radius: 9px;
     width: 307px;
@@ -441,4 +455,31 @@ body{
     margin: auto;
     color: #fcfcfc;
     opacity: 0.5;
+}
+.kalam_awards_wrap{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 0px;
+    justify-content: center;
+}
+.kalam_awards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0px;
+}
+.kalam_awards_wrap img {
+    /* width: 136px; */
+     width: 31vw; 
+    height: 100%;
+}
+.kalam_awards h2{
+    font-size: 28px;
+}
+.kalam_awards b{
+    color: var(--theme-color);
+}
+.kalam_awards .line{
+    width: 332px;
 }
