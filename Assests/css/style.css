@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sora:wght@100..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root{
+    --theme-color:#F87903;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif !important;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    width: 100%;
+    height: 100%;
+}
+.kalam_navbar{
+    position: fixed;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 2rem;
+    background: var(--theme-color);
+}
+.kalam_nav1 img{
+    width: 61px;
+    height: 34px;
+}
+.kalam_nav2{
+    display: flex;
+    gap: 16px;
+}
+.kalam_nav2 a{
+   text-decoration: none;
+   color: #fff;
+   font-size: 14px;
+}
+.kalam_right_img_section {
+    width: 400px;
+    height: 400px;
+}
+.kalam_right_img_section img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.kalam_left_text_section{
+    width: 398px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 7px;
+    padding: 2rem;
+}
+.kalam_hero_section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 2rem 0px;
+}
+.kalam_left_bg{
+    display: none;
+}
+.kalam_right_bg{
+    display: none;
+}
+.kalam_left_text_section p{
+    font-weight: 500;
+    font-size: 15px;
+}
+.kalam_left_text_section button{
+    background-color: var(--theme-color);
+    border: none;
+    padding: 5px 15px;
+    color: #fff;
+    border-radius: 7px;
+    font-size: 15px;
+}
+.kalam_what_do{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.kalam_what_detail_box{
+    box-shadow: 0px 4px 20px 0px #F96D0333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 261px;
+    padding: 10px 24px;
+    gap: 15px;
+}
+.kalam_what_detail_head {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 14px;
+}
+.kalam_what_detail_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    padding: 3rem 0px;
+    flex-wrap: wrap;
+}
+.kalam_what_detail_img {
+    width: 64px;
+    height: 56px;
+}
+.kalam_what_detail_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.kalam_what_detail_head img{
+    width: 26px;
+    height: 26px;
+}
+.kalam_what_do h2{
+    font-size: 35px;
+}
+.kalam_what_do b{
+    color: var(--theme-color);
+}
+.kalam_what_detail_head p{
+    font-size: 15px;
+    color: var(--theme-color);
+    font-weight: 600;
+}
+.kalam_what_detail_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+.kalam_what_detail_text span{
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    padding-bottom: 15px;
+}
+.kalam_what_detail_text small{
+    font-size: 11px;
+    text-align: center;
+}
+.kalam_what_detail_text span b{
+    color: black;
+}
+.kalam_what_detail_text h3{
+    color: var(--theme-color);
+    width: 151px;
+    text-align: center;
+}
+.update{
+    height: 248.6px;
+}
+.update .kalam_what_detail_img {
+    width: 89px;
+    height: auto;
+}
+.update h3{
+    padding-bottom: 27px;
+}
+.line{
+    background: #F96D03;
+    height: 1px;
+    width: 226px;
+    box-shadow: 2px 2px 5px orange;
+    filter: blur(2px);
+    margin-bottom: 7px;
+}
+.kalam_journey{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.kalam_journey h2{
+    font-size: 35px;
+}
+.kalam_journey b{
+   color: var(--theme-color);
+}
+.kalam_journey .line{
+    width: 376px;
+}
+.kalam_what_do p{
+    text-align: center;
+}
+.kalam_box1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    padding: 2rem 0px;
+}
+.kalam_right_section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--theme-color);
+    padding: 8px 15px;
+    border-radius: 64px;
+    width: 330px;
+}
+.kalam_first_img_section{
+    width: 52px;
+    box-shadow: 0px 1.83px 9.15px 0px #F96D03;
+    border-radius: 50%;
+    padding: 9px;
+    height: 52px;
+}
+.kalam_first_img_section img{
+    width: 100%;
+    height: 100%;
+}
+.kalam_second_text_section{
+    width: 212px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.kalam_second_text_section h3{
+    color: var(--theme-color);
+}
+.kalam_second_text_section b{
+    color: var(--theme-color);
+}
+.reverse_section{
+    flex-direction: row-reverse;
+}
+.kalam_second_text_section p {
+    font-size: 12px;
+    text-align: center;
+}
+.kalam_content_box1 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    padding: 8px 23px;
+}
+.kalam_right_para{
+    background: var(--theme-color);
+    padding: 3px 14px;
+    color: #fff;
+    border-radius: 9px;
+    width: 307px;
+}
+.kalam_content_box1 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    padding: 8px 23px;
+}
+.kalam_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.kalam_content_iframe iframe{
+    width: 100%;
+    height: 100%;
+}
+.kalam_text_content_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.kalam_content_video{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    padding: 1rem 0px;
+}
+.kalam_video_section_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.kalam_content_video h3{
+    text-align: center;
+}
+.kalam_content h2{
+    font-size: 30px;
+}
+.kalam_content_iframe{
+    width: 337px;
+    height: 170px;
+}
+.kalam_vision{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.kalam_vision h2{
+    text-align: center;
+}
+.kalam_vision p{
+   text-align: center;
+}
