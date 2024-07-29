@@ -12,11 +12,13 @@
 body{
     width: 100%;
     height: 100%;
+
 }
 .main{
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+
 }
 .kalam_navbar{
     position: fixed;
@@ -69,6 +71,7 @@ body{
 }
 .kalam_left_bg{
   position: relative;
+  display: none;
 }
 .kalam_left_bg img{
     position: absolute;
@@ -78,6 +81,7 @@ body{
 }
 .kalam_right_bg{
    position: relative;
+   display: none;
 }
 .kalam_right_bg img{
     position: absolute;
@@ -109,7 +113,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 261px;
+    width: 328px;
     padding: 10px 24px;
     gap: 15px;
 }
@@ -128,8 +132,8 @@ body{
     flex-wrap: wrap;
 }
 .kalam_what_detail_img {
-    width: 64px;
-    height: 56px;
+    width: 72px;
+    height: 63px;
 }
 .kalam_what_detail_img img{
     width: 100%;
@@ -137,8 +141,8 @@ body{
     object-fit: cover;
 }
 .kalam_what_detail_head img{
-    width: 26px;
-    height: 26px;
+    width: 29px;
+    height: 29px;
 }
 .kalam_what_do h2{
     font-size: 35px;
@@ -147,7 +151,7 @@ body{
     color: var(--theme-color);
 }
 .kalam_what_detail_head p{
-    font-size: 15px;
+    font-size: 17px;
     color: var(--theme-color);
     font-weight: 600;
 }
@@ -161,12 +165,13 @@ body{
 .kalam_what_detail_text span{
     display: flex;
     gap: 10px;
-    font-size: 13px;
+    font-size: 15px;
     padding-bottom: 15px;
 }
 .kalam_what_detail_text small{
-    font-size: 11px;
+    font-size: 14px;
     text-align: center;
+    font-weight: 500;
 }
 .kalam_what_detail_text span b{
     color: black;
@@ -175,6 +180,7 @@ body{
     color: var(--theme-color);
     width: 151px;
     text-align: center;
+    font-size: 22px;
 }
 .update{
     height: 248.6px;
@@ -201,13 +207,13 @@ body{
     justify-content: center;
 }
 .kalam_journey h2{
-    font-size: 35px;
+    font-size: 29px;
+}
+.kalam_journey .line{
+    width: 314px;
 }
 .kalam_journey b{
    color: var(--theme-color);
-}
-.kalam_journey .line{
-    width: 376px;
 }
 .kalam_what_do p{
     text-align: center;
@@ -218,6 +224,17 @@ body{
     justify-content: center;
     gap: 17px;
     padding: 2rem 0px;
+    padding-bottom: 1rem;
+    position: relative;
+}
+.kalam_box1 .circle_img{
+    position: absolute;
+    left: 8px;
+}
+.reverse_section .circle_img{
+    position: absolute;
+    right: 8px;
+    left: unset;
 }
 .kalam_right_section{
     display: flex;
@@ -227,13 +244,14 @@ body{
     padding: 8px 15px;
     border-radius: 64px;
     width: 330px;
+    height: 105.6px;
 }
 .kalam_first_img_section{
-    width: 52px;
+    width: 61px;
     box-shadow: 0px 1.83px 9.15px 0px #F96D03;
     border-radius: 50%;
     padding: 9px;
-    height: 52px;
+    height: 61px;
 }
 .kalam_first_img_section img{
     width: 100%;
@@ -257,6 +275,7 @@ body{
 .kalam_second_text_section p {
     font-size: 12px;
     text-align: center;
+        font-weight: 500;
 }
 .kalam_content_box1 {
     align-items: center;
@@ -284,6 +303,8 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 1.8rem 0px;
+    padding-bottom: 0;
 }
 .kalam_content_iframe iframe{
     width: 100%;
@@ -308,6 +329,7 @@ body{
 }
 .kalam_content_video h3{
     text-align: center;
+    font-size: 26px;
 }
 .kalam_content h2{
     font-size: 30px;
@@ -483,3 +505,181 @@ body{
 .kalam_awards .line{
     width: 332px;
 }
+.kalam_svg_wrapper_box {
+    display: flex;
+    gap: 12px;
+}
+.kalam_svg1 {
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    border-radius: 50%;
+    background: #fff;
+}
+.kalam_svg1 svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--theme-color);
+}
+.kalam_footer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    color: #fff;
+    gap: 0px;
+    padding: 2rem 1rem;
+    padding-bottom: 0px;
+}
+.kalam_second_footer{
+    width: 100%;
+}
+.kalam_footer h2{
+    font-size: 24px;
+    color: var(--theme-color);
+}
+.kalam_footer a{
+   color: #fff;
+   text-decoration: none;
+}
+.kalam_footer p{
+    font-size: 14px;
+}
+.kalam_foot_head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0px;
+}
+.kalam_first_top_foot_head span{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    padding: 10px 0px;
+}
+.kalam_first_center_foot,
+.kalam_first_bottom_foot,
+.kalam_second_top_foot,
+.kalam_second_bottom_foot,
+.kalam_third_center_foot,
+.kalam_third_bottom_foot{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    padding: 10px 0px;
+}
+.kalam_third_footer,
+.kalam_first_top_foot_head{
+    display: flex;
+    flex-direction: column;
+}
+.kalam_awards_wrap .big{
+    width: 27vw;
+}
+.kalam_text_svg_box{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.ancor-wrap{
+        /* width: 50%; */
+        margin-left: 48px;
+        border: 2px solid var(--theme-color);
+        padding: 9px 15px;
+        border-radius: 24px;
+        background: black;
+        color: #fff;
+        font-size: 20px;
+    
+}
+.foot-last{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    background: #fff;
+    flex-direction: row-reverse;
+    z-index: 9;
+}
+.ancor-wrap a{
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+.foot-last-icon1 svg {
+    width: 39px;
+    padding: 2px;
+}
+.footer_text{
+    text-align: center;
+    color: #fff;
+    background-color: black;
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 4rem;
+    font-size: 13px;
+}
+
+
+.radio_input[type='radio'] {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    outline: none;
+}
+
+.radio_input[type='radio']:before {
+    content: '';
+    display: block;
+    width: 65%;
+    height: 65%;
+    margin: 20% auto;
+    border-radius: 50%;
+}
+
+.radio_input[type="radio"]:checked:before {
+    background: var(--theme-color);
+}
+
+.radio_input[type="radio"]:checked {
+    border: 0.2px solid;
+  border-color:var(--theme-color);
+  filter: drop-shadow(1px 1px 13px var(--theme-color));
+  background-color: #fff;
+
+z-index: 1;
+}
+.kalam_content b{
+    color: var(--theme-color);
+}
+.sub_head{
+    font-weight: 500;
+    font-size: 21px;
+}
+
+.kalam_right_para p{
+    font-size: 17px;
+}
+
+/* media query */
+/* .kalam_journey_box_wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.kalam_box1{
+    left: 95px;
+    top: 10px;
+    right: 0;
+}
+.reverse_section{
+    left: -101px;
+} */
+
