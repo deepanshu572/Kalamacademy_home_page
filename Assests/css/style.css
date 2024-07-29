@@ -268,12 +268,13 @@ body{
 }
 .kalam_second_text_section b{
     color: var(--theme-color);
+    font-weight: 900;
 }
 .reverse_section{
     flex-direction: row-reverse;
 }
 .kalam_second_text_section p {
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
         font-weight: 500;
 }
@@ -390,7 +391,7 @@ body{
     font-size: 23px;
 }
 .kalam_mixed_img_section{
-    width: 431px;
+    width: 100%;
 }
 .kalam_mixed_img_section img{
     width: 100%;
@@ -402,12 +403,12 @@ body{
 .text_overlap p{
     position: absolute;
     color: #fff;
-    top: -221px;
-    font-size: 24px;
+    top: -127px;
+    font-size: 22px;
     text-align: center;
-    background: #00000047;
+    /* background: #00000047; */
     font-weight: 500;
-    height: 214px;
+    /* height: 206px; */
     display: flex;
     align-items: center;
 }
@@ -544,7 +545,7 @@ body{
    text-decoration: none;
 }
 .kalam_footer p{
-    font-size: 14px;
+    font-size: 15px;
 }
 .kalam_foot_head {
     display: flex;
@@ -649,7 +650,7 @@ body{
 .radio_input[type="radio"]:checked {
     border: 0.2px solid;
   border-color:var(--theme-color);
-  filter: drop-shadow(1px 1px 13px var(--theme-color));
+  /* filter: drop-shadow(1px 1px 13px var(--theme-color)); */
   background-color: #fff;
 
 z-index: 1;
