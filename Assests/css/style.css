@@ -327,10 +327,15 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    padding: 2rem 0px;
+}
+.wrap_reverse{
+    flex-direction: row-reverse;
 }
 .kalam_content_video h3{
     text-align: center;
     font-size: 26px;
+    color: #4F2303;
 }
 .kalam_content h2{
     font-size: 30px;
@@ -386,6 +391,7 @@ body{
     width: 314px;
     gap: 12px;
 }
+
 .kalam_vision_box h3 {
     color: var(--theme-color);
     font-size: 23px;
@@ -435,7 +441,8 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem 0px;
+    padding: 1rem 22px;
+    width: 100%;
 }
 .kalam_contact_detail_text {
     display: flex;
@@ -648,7 +655,7 @@ body{
 }
 
 .radio_input[type="radio"]:checked {
-    border: 0.2px solid;
+    border: 1.5px solid;
   border-color:var(--theme-color);
   /* filter: drop-shadow(1px 1px 13px var(--theme-color)); */
   background-color: #fff;
@@ -666,13 +673,36 @@ z-index: 1;
 .kalam_right_para p{
     font-size: 17px;
 }
-
+.kalam_contact_map{
+    width: 334px;
+    height: 157px;
+    box-shadow: 1px 1px 5px #dfdcdc;
+    border-radius: 7px;
+    overflow: hidden;
+}
+.kalam_contact_map iframe{
+    width: 100%;
+    height: 100%;
+  }
+  .footer_text{
+    font-size: 15px;
+  }
+  .kalam_third_footer b{
+    color: var(--theme-color);
+    padding-right: 7px;
+    font-size: 18px;
+  }
 /* media query */
-/* .kalam_journey_box_wrap{
+@media (max-width: 2000px) and (min-width: 600px) {
+    .kalam_vision_img {
+        width: 346px;
+    }
+.kalam_journey_box_wrap{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     width: 100%;
 }
 .kalam_box1{
@@ -682,5 +712,142 @@ z-index: 1;
 }
 .reverse_section{
     left: -101px;
-} */
+}
+.kalam_third_footer{
+    width: 309px;
+    height: 369px;
+}
+.kalam_second_footer {
+    height: 398px;
+    width: auto;
+}
+.kalam_first_footer{
+    width: 406px;
+}
+.kalam_footer{
+    padding-left: 0rem;
+    justify-content: center;
+    gap: 92px;
+    padding-left: 2rem;
+}
+.ancor-wrap a{
+    font-size: 13px;
+}
+.ancor-wrap p{
+    width: 118px;
+}
+.foot-last{
+    background-color: transparent;
+    width: auto;
+    right: -5vw;
+    transform: rotate(90deg);
+    flex-direction: row;
+    bottom: 121px;
+    gap: 10px;
+}
+.foot-last-icon1{
+    transform: rotate(-90deg);
+}
+.ancor-wrap{
+    transform: rotate(0deg) !important;
+    margin-left: 0px;
+}
+.footer_text{
+    padding-bottom: 10px;
+    font-weight: 300;
+    font-size: 17px;
+}
+.kalam_nav2 a{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.kalam_awards_wrap img{
+        width: 130px;
+        height: 100%;
+}
+.kalam_awards_wrap .big{
+    width: 108px !important;
+    height: 100%;
+}
+.kalam_vision_wrap{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 60px;
+    padding: 3rem 0px;
+    justify-content: center;
+}
+.kalam_vision_left_section{
+    flex-direction: column;
+    width: auto;
+}
+.kalam_vision .line{
+    width: 275px;
+}
+.kalam_awards_wrap{
+    gap: 33px;
+}
+.kalam_contact_map{
+    width: 399px;
+    height: 230px;
+}
 
+.kalam_contact_detai_box{
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 2rem 0px;
+}
+.kalam_text_wrapper{
+    width: 448px;
+}
+.text_overlap p {
+    top: -211px;
+    font-size: 24px;
+    width: 490px;
+    left: 153px;
+}
+.kalam_mixed_img_section{
+    width: 725px;
+    margin: auto;
+}
+.kalam_vision_box {
+    height: 239.6px;
+    width: 199px;
+}
+.kalam_vision_box p {
+    font-size: 12px;
+}
+.update{
+    height: 277.8px;
+}
+
+.kalam_first_top_foot_head span{
+    font-size: 17px;
+}
+
+.kalam_what_detail_box{
+    width: 287px;
+    height: 295.4px;
+    padding: 10px 8px;
+
+}
+.kalam_content_iframe{
+    width: 534px;
+    height: 300px;
+
+}
+.kalam_video_section_wrap{
+    gap: 37px;
+    align-items: end;
+}
+.kalam_content_video h3{
+    font-size: 36px;
+}
+.kalam_right_para p {
+    font-size: 16px;
+}
+.kalam_journey{
+    padding-bottom: 2rem;
+}
+}
