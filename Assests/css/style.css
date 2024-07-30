@@ -134,6 +134,7 @@ body{
     gap: 22px;
     padding: 3rem 0px;
     flex-wrap: wrap;
+    z-index: 1;
 }
 .kalam_what_detail_img {
     width: 72px;
