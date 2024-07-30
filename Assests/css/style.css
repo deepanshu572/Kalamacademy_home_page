@@ -71,23 +71,23 @@ body{
 }
 .kalam_left_bg{
   position: relative;
-  display: none;
+  /* display: none; */
 }
 .kalam_left_bg img{
     position: absolute;
-    top: -150px;
+    top: -177px;
     width: 281px;
-    left: 146px;
+    left: 70vw;
 }
 .kalam_right_bg{
    position: relative;
-   display: none;
+   /* display: none; */
 }
 .kalam_right_bg img{
     position: absolute;
     top: -368px;
     width: 281px;
-    left: -426px;
+    right: 69vw;
 }
 .kalam_left_text_section p{
     font-weight: 500;
