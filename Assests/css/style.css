@@ -634,7 +634,7 @@ body{
     width: 100%;
     padding: 10px;
     padding-bottom: 4rem;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 
@@ -711,12 +711,15 @@ z-index: 1;
     width: 100%;
 }
 .kalam_box1{
-    left: 95px;
+    left: 157px;
     top: 10px;
     right: 0;
 }
+.kalam_box1 .circle_img{
+    height: 160px;
+}
 .reverse_section{
-    left: -101px;
+    left: -99px;
 }
 .kalam_third_footer{
     width: 309px;
@@ -747,8 +750,8 @@ z-index: 1;
     right: -5vw;
     transform: rotate(90deg);
     flex-direction: row;
-    bottom: 121px;
-    gap: 10px;
+    bottom: 108px;
+    gap: 5px;
 }
 .foot-last-icon1{
     transform: rotate(-90deg);
@@ -787,8 +790,11 @@ z-index: 1;
     flex-direction: column;
     width: auto;
 }
+.line{
+    width: 244px;
+}
 .kalam_vision .line{
-    width: 275px;
+    width: 327px;
 }
 .kalam_awards_wrap{
     gap: 33px;
@@ -807,22 +813,23 @@ z-index: 1;
     width: 448px;
 }
 .text_overlap p {
-    top: -211px;
-    font-size: 24px;
+    top: -242px;
+    font-size: 30px;
     width: 490px;
-    left: 153px;
+    left: 177px;
 }
 .kalam_mixed_img_section{
-    width: 725px;
+    width: 793px;
     margin: auto;
 }
 .kalam_vision_box {
-    height: 239.6px;
+    height: 259.6px;
     width: 199px;
 }
 .kalam_vision_box p {
-    font-size: 12px;
+    font-size: 15px;
 }
+
 .update{
     height: 277.8px;
 }
@@ -874,5 +881,61 @@ z-index: 1;
  }
  .kalam_hero_section{
     background-image: none;
+            height: 563px;
  }
+ .kalam_left_text_section h1{
+    font-size: 45px;
+ }
+ .kalam_left_text_section p{
+    font-size: 18px;
+ }
+ .kalam_left_text_section button{
+    padding: 8px 26px;
+    font-size: 18px;
+ }
+ .kalam_left_text_section{
+    width: 430px;
+ }
+ .kalam_what_detail_section{
+    gap: 47px;
+ }
+ .kalam_right_section{
+    width: 406px;
+    height: 118.6px;
+ }
+ .kalam_first_img_section{
+    position: relative;
+    left: -40px;
+ }
+ .reverse_section .kalam_first_img_section{
+    position: relative;
+    left: 38px;
+ }
+ .kalam_right_section{
+    justify-content: center;
+ }
+ /* .kalam_box1{
+    left: 185px;
+ } */
+ .kalam_contact_detail{
+    padding: 2rem 0px;
+    padding-top: 4rem;
+ }
+ .kalam_awards{
+    padding: 2rem 0px;
+ }
+ .kalam_content h2{
+    font-size: 35px;
+ }
+ .kalam_vision h2{
+    font-size: 35px;
+ }
+ .kalam_journey h2 {
+    font-size: 35px;
 }
+.kalam_journey .line{
+    width: 373px;
+}
+}
+
+
