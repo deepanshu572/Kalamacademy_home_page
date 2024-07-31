@@ -941,3 +941,111 @@ z-index: 1;
 }
 
 
+/* BUISNESS PAGE CSS */
+.kalam_buisness_hero_section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4rem 2rem;
+    gap: 28px;
+    padding-top: 6rem;
+    flex-wrap: wrap;
+
+}
+.kalam_buisness_left{
+    width: 580px;
+    padding-top: 1rem;
+}
+.kalam_buisness_top{
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    padding: 1rem 0px;
+}
+.kalam_buisness_top h1{
+    font-size: 45px;
+}
+.kalam_buisness_top u{
+    color: var(--theme-color);
+}
+.kalam_buisness_top p{
+        color: #363636;
+        font-size: 18px;
+        width: 304px;
+}
+.kalam_buisness_bottom button
+{
+    background: var(--theme-color);
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+}
+.kalam_buisness_right {
+    width: 522px;
+    
+}
+.kalam_buisness_right img{
+    width: 100%;
+    height: 100%;
+}
+.kalam_buisness_feature_img{
+    width: 200px;
+}
+.kalam_buisness_feature_img img{
+    width: 100%;
+    height: 100%;
+}
+.kalam_buisness_feature_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 52px;
+    flex-wrap: wrap;
+}
+.kalam_buisness_feature_img {
+    width: 135px;
+}
+.kalam_buisness_feature_img img{
+    width: 100%;
+    height: 100%;
+}
+.kalam_buisness_feacture1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.kalam_nav2 a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+@media (max-width: 600px) {
+    .kalam_buisness_feature_wrap{
+        gap: 10px;
+        padding-bottom: 3rem;
+    }
+    .kalam_buisness_hero_section{
+        padding: 1rem 1rem;
+        padding-top: 3rem;
+    }
+    .kalam_buisness_left{
+        width: auto;
+        padding-top: 0px;
+    }
+    .kalam_buisness_top h1 {
+        font-size: 26px;
+    }
+    .kalam_buisness_feacture1{
+        width: 31vw;
+        justify-content: center;
+        height: 147px;
+}
+.kalam_buisness_feature_img {
+    width: 112px;
+}
+.kalam_buisness_feacture1 p {
+    text-align: center;
+    font-weight: 700;
+}
+}
