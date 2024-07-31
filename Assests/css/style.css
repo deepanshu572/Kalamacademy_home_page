@@ -833,6 +833,9 @@ z-index: 1;
 .update{
     height: 277.8px;
 }
+.kalam_vision_box{
+    padding: 20px 10px;
+}
 
 .kalam_first_top_foot_head span{
     font-size: 17px;
