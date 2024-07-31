@@ -825,6 +825,7 @@ z-index: 1;
 .kalam_vision_box {
     height: 259.6px;
     width: 199px;
+    padding: 20px 10px;
 }
 .kalam_vision_box p {
     font-size: 15px;
@@ -833,9 +834,7 @@ z-index: 1;
 .update{
     height: 277.8px;
 }
-.kalam_vision_box{
-    padding: 20px 10px;
-}
+
 
 .kalam_first_top_foot_head span{
     font-size: 17px;
