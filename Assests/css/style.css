@@ -1020,6 +1020,54 @@ z-index: 1;
     align-items: center;
     gap: 5px;
 }
+.kalam_buisness_form_video_section{
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.kalam_buisness_video_section{
+    width: 338px;
+    height: 163px;
+}
+.kalam_buisness_video_section iframe{
+    width: 100%;
+    height: 100%;
+}
+.kalam_buisness_form_section {
+    display: flex;
+    flex-direction: column;
+    background: #616161;
+    padding: 10px;
+    height: 440px;
+    gap: 30px;
+    box-shadow: 0px 5px 15px 0px #F8790326;
+
+box-shadow: 0px -5px 15px 0px #F8790326;
+
+}
+.kalam_buisness_form_section h2{
+    font-size: 18px;
+    color: #fff;
+}
+.kalam_buisness_form_section label{
+    color: #fff;
+}
+.kalam_buisness_input_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.kalam_buisness_form1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.kalam_buisness_form1 input{
+    padding: 9px 7px;
+}
 @media (max-width: 600px) {
     .kalam_buisness_feature_wrap{
         gap: 10px;
