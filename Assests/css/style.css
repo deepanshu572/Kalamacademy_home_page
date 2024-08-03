@@ -1348,9 +1348,59 @@ border-radius: 6px;
     align-items: center;
     justify-content: center;
 }
+.kalam_buisness_faq_section_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 39px;
+    padding: 4rem 0px;
+}
+.kalam_buisness_mix_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0px 4px 10px 0px #0000001A;
+    border-radius: 10px;
+}
+.kalam_buisness_mix_head h3 {
+    font-size: 15px;
+}
+.kalam_buisness_mix_content p {
+    font-size: 14px;
+}
+.kalam_buisness_mix_head svg{
+    color: var(--theme-color);
+}
+.kalam_buisness_mix_content{
+    box-shadow: 0px 4px 10px 0px #0000001A;
+    padding: 17px;
+    background: var(--theme-color);
+    color: #fff;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.kalam_buisness_mix_section {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 432px;
+}
+.kalam_buisness_bottom_section{
+    display: block;
+}
+
 @media (max-width: 600px) {
+    .kalam_buisness_mix_section{
+        width: 90vw;
+    }
+    
     .kalam_direction_relative{
         width: auto;
+    }
+    .kalam_buisness_bottom_section{
+        display: none;
     }
     .direction1{
         transform: rotate(269deg);
