@@ -1,0 +1,104 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Multiple Divs with Radio Buttons</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #toggleDiv1,
+#toggleDiv2,
+#toggleDiv3,
+#toggleDiv4 {
+    display: none;
+}
+
+#toggleRadio1:checked ~ #toggleDiv1,
+#toggleRadio2:checked ~ #toggleDiv2,
+#toggleRadio3:checked ~ #toggleDiv3,
+#toggleRadio4:checked ~ #toggleDiv4 {
+    display: block;
+}
+
+    </style>
+</head>
+<body>
+    <input type="radio" name="toggle" id="toggleRadio1">
+    <label for="toggleRadio1">Show Div 1</label>
+    <div id="toggleDiv1">This is the content of div 1.</div>
+
+    <input type="radio" name="toggle" id="toggleRadio2">
+    <label for="toggleRadio2">Show Div 2</label>
+    <div id="toggleDiv2">This is the content of div 2.</div>
+
+    <input type="radio" name="toggle" id="toggleRadio3">
+    <label for="toggleRadio3">Show Div 3</label>
+    <div id="toggleDiv3">This is the content of div 3.</div>
+
+    <input type="radio" name="toggle" id="toggleRadio4">
+    <label for="toggleRadio4">Show Div 4</label>
+    <div id="toggleDiv4">This is the content of div 4.</div>
+
+    <script src="script.js"></script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Multiple Divs</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #toggleDiv1,
+#toggleDiv2,
+#toggleDiv3,
+#toggleDiv4 {
+    display: none;
+}
+
+#toggleCheckbox1:checked + label + #toggleDiv1 {
+    display: block;
+}
+
+#toggleCheckbox2:checked + label + #toggleDiv2 {
+    display: block;
+}
+
+#toggleCheckbox3:checked + label + #toggleDiv3 {
+    display: block;
+}
+
+#toggleCheckbox4:checked + label + #toggleDiv4 {
+    display: block;
+}
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="toggleCheckbox1">
+    <label for="toggleCheckbox1">Show/Hide Div 1</label>
+    <div id="toggleDiv1">This is the content of div 1.</div>
+
+    <input type="checkbox" id="toggleCheckbox2">
+    <label for="toggleCheckbox2">Show/Hide Div 2</label>
+    <div id="toggleDiv2">This is the content of div 2.</div>
+
+    <input type="checkbox" id="toggleCheckbox3">
+    <label for="toggleCheckbox3">Show/Hide Div 3</label>
+    <div id="toggleDiv3">This is the content of div 3.</div>
+
+    <input type="checkbox" id="toggleCheckbox4">
+    <label for="toggleCheckbox4">Show/Hide Div 4</label>
+    <div id="toggleDiv4">This is the content of div 4.</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

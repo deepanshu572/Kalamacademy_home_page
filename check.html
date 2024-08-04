@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+
+.slider__wrapper {
+    display: flex;
+    gap: 34px;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.slider__item {
+    padding: 30px 0;
+    display: inline-block;
+    width: 294px !important;
+    height: 100%;
+    font-size: 12px;
+    vertical-align: top;
+    transition: all 0.3s ease-out;
+}
+
+.slider__content.active {
+  box-shadow: rgba(255, 137, 95, 0.15) 0px 1px 2px, rgba(255, 137, 95, 0.15) 0px 2px 4px, rgba(255, 137, 95, 0.15) 0px 4px 8px, rgba(255, 137, 95, 0.15) 0px 8px 16px, rgba(255, 137, 95, 0.15) 0px 16px 32px, rgba(255, 137, 95, 0.15) 0px 32px 64px;
+  transform: scale(1);
+  transition: all 0.5s ease-in;
+  animation: shadow 5s ease 0s infinite;
+}
+.slider__content img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.slider__image {
+    margin: -12px;
+}
+.slider__over{
+  position: relative;
+}
+.slider__text {
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+.slider__title {
+  white-space: normal;
+  font-size: 20px;
+  line-height: 22px;
+  color: white;
+}
+.slider__controls {
+  top: calc(50% - 13px);
+  left: 0;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.slider__controls button {
+  background-color: transparent;
+  border: none;
+}
+.slider__controls button span {
+  color: rgb(255, 137, 95);
+  font-size: 15px;
+  text-transform: uppercase;
+  transition: all 0.7s ease;
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: -1px 12px 35px 6px rgba(255, 137, 95, 0.2);
+  }
+  50% {
+    box-shadow: -7px -8px 38px 11px rgba(255, 137, 95, 0.25);
+  }
+  100% {
+    box-shadow: -1px 11px 33px 3px rgba(255, 137, 95, 0.1);
+  }
+}
+.selection {
+    display: none;
+}
+.content__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    </style>
+    <link rel="stylesheet" href="Assests/css/style copy.css">
+</head>
+<body>
+    <div class="content__wrapper">
+        <div class="selection">
+          <label for="itemNumber">Choose the number of items in the slider: </label>
+          <input type="number" value="3" min="1" max="6" id="itemNumber">
+          <p id="itemNumberMess"></p>
+        </div>
+        <div class="slider">
+          <div class="slider__wrapper" id="list">
+            <div class="slider__item">
+              <div class="slider__content kalam_buisness_box ">
+                <div class="kalam_buisness_wrap_items">
+                <div class="slider__image kalam-buisness_img">
+                  <img src="Assests/img/kalam_people.png" alt=""/>
+                </div>
+                 <h3>AMIT KUMAR SINGH</h3>
+                <b>DOT IT Media</b>
+                <p>Kalam Academy Ranchi ignited my 
+                  journey. Dream foreign clients. Learned freelancing now lead a team of 20+.
+                  Grateful to Kalam Academy for the transformation!</p>
+                </div>
+                <div class="slider__over kalam_buisness_bottom_text">
+                      <div class="kalam_bottom_img">
+                    <img src="Assests/img/kalam_scholar.png" alt="">
+                  </div>
+                 <p>Student Feedback</p>
+                  
+                  </div>
+                </div>
+              </div>
+            <div class="slider__item">
+              <div class="slider__content kalam_buisness_box  active">
+                <div class="kalam_buisness_wrap_items">
+                <div class="slider__image kalam-buisness_img">
+                  <img src="Assests/img/kalam_people.png" alt=""/>
+                </div>
+                 <h3>AMIT KUMAR SINGH</h3>
+                <b>DOT IT Media</b>
+                <p>Kalam Academy Ranchi ignited my 
+                  journey. Dream foreign clients. Learned freelancing now lead a team of 20+.
+                  Grateful to Kalam Academy for the transformation!</p>
+                </div>
+                <div class="slider__over kalam_buisness_bottom_text">
+                      <div class="kalam_bottom_img">
+                    <img src="Assests/img/kalam_scholar.png" alt="">
+                  </div>
+                 <p>Student Feedback</p>
+                  
+                  </div>
+                </div>
+              </div>
+            <div class="slider__item">
+              <div class="slider__content kalam_buisness_box ">
+                <div class="kalam_buisness_wrap_items">
+                <div class="slider__image kalam-buisness_img">
+                  <img src="Assests/img/kalam_people.png" alt=""/>
+                </div>
+                 <h3>AMIT KUMAR SINGH</h3>
+                <b>DOT IT Media</b>
+                <p>Kalam Academy Ranchi ignited my 
+                  journey. Dream foreign clients. Learned freelancing now lead a team of 20+.
+                  Grateful to Kalam Academy for the transformation!</p>
+                </div>
+                <div class="slider__over kalam_buisness_bottom_text">
+                      <div class="kalam_bottom_img">
+                    <img src="Assests/img/kalam_scholar.png" alt="">
+                  </div>
+                 <p>Student Feedback</p>
+                  
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="slider__controls">
+            <button class="slider__left" type="button" id="arrowLeft">
+              <span>Back</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path  d="M24 12.001H2.914l5.294-5.295-.707-.707L1 12.501l6.5 6.5.707-.707-5.293-5.293H24v-1z" data-name="Left"/></svg>
+             </button>
+            <button class="slider__right" type="button" id="arrowRight">
+              <span>Next</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path  d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/></svg>
+            </button>
+          </div>
+      </div>
+      </div>
+      
+
+      <script>
+        // Element references
+const arrowRight = document.getElementById("arrowRight");
+const arrowLeft = document.getElementById("arrowLeft");
+const list = document.getElementById("list");
+const valueItemNumber = document.getElementById("itemNumber");
+const valueItemNumberMax = valueItemNumber.ariaValueMax;
+const defaultItemNumber = 3;
+const initialNumberItems = list.children.length;
+const itemNumberMess = document.getElementById("itemNumberMess");
+const wrapper = document.querySelector(".slider__wrapper");
+const wrapperWidth = wrapper.offsetWidth;
+const numVisibleItems = 3;
+let centralItem = 2;
+let itemNumberValue = parseInt(valueItemNumber.value);
+
+// Initialize item number and set width of items
+const initialItemNumberValue = itemNumberValue || defaultItemNumber;
+let itemNumber = calculatePercentItemNumber(initialItemNumberValue);
+resetItems(itemNumber);
+
+// Utility functions
+function calculatePercentItemNumber(num) {
+  return num ? 100 / num : 100 / defaultItemNumber;
+}
+
+function listNumber(inputNumber) {
+  const message =
+    inputNumber >= 6
+      ? "You reached the maximum number of items"
+      : `Changed to ${inputNumber}`;
+  itemNumberMess.textContent = message;
+}
+
+function resetItems(number) {
+  const sliderItems = document.querySelectorAll(".slider__item");
+  sliderItems.forEach((item) => (item.style.width = `${number}%`));
+  itemNumber = number;
+}
+
+function calculateCentralItem(numVisibleItems) {
+  const centralItem = Math.ceil(numVisibleItems / 2);
+  return centralItem;
+}
+
+function addActiveElement(centralItem, totalVisibleItems) {
+  // Clear active class
+  const sliderItems = document.querySelectorAll(".slider__item");
+  sliderItems.forEach((item) =>
+    item.querySelector(".slider__content").classList.remove("active")
+  );
+
+  // Set active class to central element(s)
+  const central = sliderItems[Math.floor(centralItem)];
+  central.querySelector(".slider__content").classList.add("active");
+
+  if (totalVisibleItems % 2 === 0) {
+    const central2 = sliderItems[Math.floor(centralItem) + 1];
+    central2.querySelector(".slider__content").classList.add("active");
+
+    if (totalVisibleItems == 2) {
+      const central3 = sliderItems[Math.floor(centralItem) - 1];
+      central3.querySelector(".slider__content").classList.add("active");
+    }
+  }
+}
+
+// Event listeners
+valueItemNumber.addEventListener("input", function () {
+  itemNumberValue = parseInt(valueItemNumber.value);
+  listNumber(itemNumberValue);
+  const newPercentage = calculatePercentItemNumber(itemNumberValue);
+  resetItems(newPercentage);
+  centralItem = calculateCentralItem(itemNumberValue);
+  addActiveElement(centralItem - 1, itemNumberValue);
+});
+
+arrowRight.addEventListener("click", moveFirstToEnd);
+arrowLeft.addEventListener("click", moveLastToStart);
+
+function moveFirstToEnd() {
+  const firstItem = list.firstElementChild;
+  firstItem.style.marginLeft = `calc(-${itemNumber}%)`;
+
+  if (firstItem) {
+    setTimeout(() => {
+      firstItem.style.marginLeft = "";
+      list.appendChild(firstItem);
+    }, 300);
+  }
+  addActiveElement(centralItem, itemNumberValue);
+}
+
+function moveLastToStart() {
+  const lastItem = list.lastElementChild;
+  list.removeChild(lastItem);
+  list.insertBefore(lastItem, list.firstElementChild);
+  const newFirstItem = list.firstElementChild;
+
+  if (newFirstItem) {
+    newFirstItem.style.marginLeft = `calc(-${itemNumber}%)`;
+    setTimeout(() => {
+      newFirstItem.style.marginLeft = "";
+    }, 1);
+  }
+
+  addActiveElement(centralItem - 1, itemNumberValue);
+}
+
+      </script>
+</body>
+</html>

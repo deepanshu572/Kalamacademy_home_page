@@ -1157,8 +1157,12 @@ border-radius: 6px;
 .kalam_buisness_box{
     box-shadow: 0px 4.47px 27.92px 0px #F96D0440;
     border-radius: 25px;
-    /* width: 291px; */
-    width: 271px;
+    width: 260px;
+    height: 253px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     transform: scale(0.9);
 }
 .kalam_buisness_story_wrap{
@@ -1186,6 +1190,7 @@ border-radius: 6px;
     gap: 9px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    width: 100%;
 }
 .kalam_buisness_wrap_items {
     display: flex;
@@ -1193,9 +1198,9 @@ border-radius: 6px;
     align-items: center;
     padding: 12px;
     position: relative;
-    top: -32px;
-    gap: 12px;
-    height: 252px;
+    /* top: -9px; */
+    top: -13px;
+    gap: 9px;
 }
 .kalam_buisness_wrap_items p{
     text-align: center;
@@ -1275,7 +1280,6 @@ border-radius: 6px;
     align-items: center;
     justify-content: center;
     padding: 3rem;
-    padding-bottom: 1rem;
 }
 .kalam_buisness_different_img img {
     width: 100%;
@@ -1358,6 +1362,7 @@ border-radius: 6px;
     justify-content: center;
     flex-wrap: wrap;
     gap: 39px;
+    padding: 4rem 0px;
 }
 .kalam_buisness_mix_head {
     display: flex;
@@ -1415,147 +1420,11 @@ border-radius: 6px;
 .kalam_buisness_development b{
    color: var(--theme-color);
 }
-
-.slider__wrapper {
-    display: flex;
-    gap: 34px;
-    overflow: hidden;
-    justify-content: center;
-}
-
-.slider__item {
-    padding: 30px 0;
-    display: inline-block;
-    width: 294px !important;
-    height: 100%;
-    font-size: 14px;
-    vertical-align: top;
-    transition: all 0.3s ease-out;
-}
-
-.slider__content.active {
-  box-shadow: rgba(255, 137, 95, 0.15) 0px 1px 2px, rgba(255, 137, 95, 0.15) 0px 2px 4px, rgba(255, 137, 95, 0.15) 0px 4px 8px, rgba(255, 137, 95, 0.15) 0px 8px 16px, rgba(255, 137, 95, 0.15) 0px 16px 32px, rgba(255, 137, 95, 0.15) 0px 32px 64px;
-  transform: scale(1);
-  transition: all 0.5s ease-in;
-  animation: shadow 5s ease 0s infinite;
-}
-.slider__content img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-}
-.slider__image {
-    margin: -12px;
-}
-.slider__over{
-  position: relative;
-}
-.slider__text {
-  left: 0;
-  bottom: 0;
-  position: absolute;
-  width: 100%;
-}
-.slider__title {
-  white-space: normal;
-  font-size: 20px;
-  line-height: 22px;
-  color: white;
-}
-.slider__controls {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: 8px;
-}
-.slider__controls button {
-    background-color: transparent;
-    border: none;
-    width: 37px;
-    height: 6px;
-    background: #f879038f;
-    border-radius: 10px;
-    transition: cubic-bezier(0.19, 1, 0.22, 1)1s;
-    cursor: pointer;
-}
-.slider__controls button:hover{
-    background-color: var(--theme-color);
-
-}
-.slider__controls button span {
-  color: rgb(255, 137, 95);
-  font-size: 15px;
-  text-transform: uppercase;
-  transition: all 0.7s ease;
-}
-
-@keyframes shadow {
-  0% {
-    box-shadow: -1px 12px 35px 6px rgba(255, 137, 95, 0.2);
-  }
-  50% {
-    box-shadow: -7px -8px 38px 11px rgba(255, 137, 95, 0.25);
-  }
-  100% {
-    box-shadow: -1px 11px 33px 3px rgba(255, 137, 95, 0.1);
-  }
-}
-.selection {
-    display: none;
-}
-.content__wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-#faqDiv1,
-#faqDiv2, 
-#faqDiv3, 
-#faqDiv4, 
-#faqDiv5, 
-#faqDiv6, 
-#faqDiv7, 
-#faqDiv8{
-    display: none;
-}
-
-/* #faq1:checked ~ #faqDiv1,
-#faq2:checked ~ #faqDiv2,
-#faq3:checked ~ #faqDiv3,
-#faq4:checked ~ #faqDiv4,
-#faq5:checked ~ #faqDiv5,
-#faq6:checked ~ #faqDiv6,
-#faq7:checked ~ #faqDiv7,
-#faq8:checked ~ #faqDiv8{
-    display: block;
-} */
-#faq1:checked + label + #faqDiv1,
-#faq2:checked + label + #faqDiv2,
-#faq3:checked + label + #faqDiv3,
-#faq4:checked + label + #faqDiv4,
-#faq5:checked + label + #faqDiv5,
-#faq6:checked + label + #faqDiv6,
-#faq7:checked + label + #faqDiv7,
-#faq8:checked + label + #faqDiv8{
-    display: block;
-}
-
-.kalam_buisness_mix_box1{
-    transition: cubic-bezier(0.19, 1, 0.22, 1)1s;
-}
-.kalam_buisness_mix_box1 input {
-    position: absolute;
-    opacity: 0;
-}
 @media (max-width: 600px) {
     .kalam_buisness_mix_section{
         width: 90vw;
     }
-    .slider{
-        width: 361px;
-    }
+    
     .kalam_direction_relative{
         width: auto;
     }
@@ -1567,10 +1436,6 @@ border-radius: 6px;
         top: 258px;
         width: 260px;
         left: -140px;
-    }
-    .kalam_buisness_faq_section_wrap{
-        padding: 2rem 0px;
-        gap: 18px;
     }
     .direction2{
         transform: rotate(90deg);
