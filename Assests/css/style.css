@@ -1233,6 +1233,7 @@ border-radius: 6px;
 }
 .arrow_img{
     width: 158px;
+    
 }
 .kalam_buisness_development_box p{
     white-space: nowrap;
@@ -1300,6 +1301,7 @@ border-radius: 6px;
     justify-content: center;
     text-align: center;
     gap: 16px;
+
 }
 .direction{
     width: 164px;
@@ -1549,9 +1551,18 @@ border-radius: 6px;
     position: absolute;
     opacity: 0;
 }
+.desk{
+    display: none;
+}
 @media (max-width: 600px) {
     .kalam_buisness_mix_section{
         width: 90vw;
+    }
+    .mob_img{
+        display: none;
+    }
+    .desk{
+        display: block;
     }
     .slider{
         width: 361px;
@@ -1572,13 +1583,33 @@ border-radius: 6px;
         padding: 2rem 0px;
         gap: 18px;
     }
+    .kalam_buisness_different_box{
+        margin-bottom: 34px;
+    }
     .direction2{
         transform: rotate(90deg);
         top: -180px;
         width: 251px;
         left: -359px;
     }
-    
+    .kalam_buisness_development_wrap{
+        padding: 2rem 8vw;
+    }
+    .kalam_buisness_development_box p{
+        white-space: normal;
+        width: 145px;
+    }
+    .kalam_buisness_img {
+        width: 68px;
+    }
+    .kalam_buisness_development_box {
+        height: auto;
+        width: 15vw;
+        gap: 12px;
+    }
+    .arrow_img {
+        width: 123px;
+    }
     .kalam_buisness_feature_wrap{
         gap: 10px;
         padding-bottom: 3rem;
