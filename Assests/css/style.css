@@ -1099,7 +1099,7 @@ border-radius: 6px;
 }
 .kalam_buisness_form_section label{
     color: #fff;
-        font-size: 14px;
+    font-size: 17px;
 }
 .kalam_buisness_input_wrapper{
     display: flex;
@@ -1374,7 +1374,6 @@ border-radius: 6px;
 .kalam_buisness_mix_head h3 {
     font-size: 15px;
     font-weight: 500;
-
 }
 .kalam_buisness_mix_content p {
     font-size: 14px;
@@ -1673,9 +1672,8 @@ border-radius: 6px;
     font-weight: 700;
 }
 .kalam_buisness_video_section{
-    width: 100%;
-    /* height: 188px; */
-    height: 214px;
+    width: 96%;
+    height: 207px;
 
 }
 .kalam_buisness_banner_section{
@@ -1708,17 +1706,16 @@ border-radius: 6px;
 }
 .kalam_buisness_form1 input{
     height: 44px;
-    font-size: 16px;
+    font-size: 15px;
 }
-.kalam_buisness_form_section label{
-    font-size: 18px;
-
+.kalam_buisness_form_section label {
+    font-size: 17px;
 }
 .kalam_buisness_form_section h2{
     font-size: 19px;
 }
 .kalam_buisness_input_wrapper{
-    width: 94vw;
+    width: 91vw;
 
 }
 .kalam_buisness_form_section{
