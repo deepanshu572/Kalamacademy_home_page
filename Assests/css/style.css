@@ -1262,12 +1262,16 @@ border-radius: 6px;
     align-items: center;
     gap: 5px;
 }
+.kalam_banner_bottom p{
+    font-size: 19px;
+}
 .kalam_banner_bottom button{
     border: none;
     border-radius: 5px;
     padding: 8px 17px;
     color: var(--theme-color);
     font-size: 11px;
+    background-color: #fff;
 }
 .kalam_buisness_banner_section h2{
     font-size: 37px;
