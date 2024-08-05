@@ -1242,6 +1242,7 @@ border-radius: 6px;
 }
 .kalam_buisness_development{
     text-align: center;
+    position: relative;
 }
 .kalam_buisness_banner_section {
     background-image: url(../img/kalam_buisness_banner.jpeg);
@@ -1565,7 +1566,12 @@ border-radius: 6px;
         width: 90vw;
     }
     .mob_img{
-        display: none;
+        position: absolute;
+        transform: rotate(158deg);
+        top: 290px;
+    }
+    .mob_img1{
+        top: 480px;
     }
     .desk{
         display: block;
