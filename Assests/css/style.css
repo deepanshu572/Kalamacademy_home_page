@@ -690,7 +690,7 @@ z-index: 1;
     height: 100%;
   }
   .footer_text{
-    font-size: 15px;
+    font-size: 13px;
   }
   .kalam_third_footer b{
     color: var(--theme-color);
@@ -969,9 +969,11 @@ z-index: 1;
     color: var(--theme-color);
 }
 .kalam_buisness_top p{
-        color: #363636;
-        font-size: 18px;
-        width: 304px;
+           /* color: #363636; */
+    font-size: 18px;
+    width: 304px;
+    font-weight: 500;
+    font-size: 15px;
 }
 .kalam_buisness_bottom button
 {
@@ -1028,7 +1030,7 @@ z-index: 1;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-    padding: 3rem 0px;
+    padding: 1rem 0px;
     gap: 30px;
 }
 .kalam_buisness_why_kalam{
@@ -1160,7 +1162,8 @@ border-radius: 6px;
     box-shadow: 0px 4.47px 27.92px 0px #F96D0440;
     border-radius: 25px;
     /* width: 291px; */
-    width: 271px;
+    /* width: 271px; */
+    width:294px;
     transform: scale(0.9);
 }
 .kalam_buisness_story_wrap{
@@ -1188,6 +1191,7 @@ border-radius: 6px;
     gap: 9px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    justify-content: center;
 }
 .kalam_buisness_wrap_items {
     display: flex;
@@ -1197,7 +1201,8 @@ border-radius: 6px;
     position: relative;
     top: -32px;
     gap: 12px;
-    height: 252px;
+    /* height: 252px; */
+    height: 271px;
 }
 .kalam_buisness_wrap_items p{
     text-align: center;
@@ -1565,6 +1570,13 @@ border-radius: 6px;
 #form_box{
     height: 32px;
 }
+.kalam_buisness_why_kalam .line{
+    width: 323px;
+}
+.kalam_buisness_success_story .line{
+    width: 323px;
+    margin: auto;
+}
 @media (max-width: 600px) {
     .kalam_buisness_mix_section{
         width: 90vw;
@@ -1682,7 +1694,7 @@ border-radius: 6px;
     font-weight: 700;
 }
 .kalam_buisness_video_section{
-    width: 96%;
+    width: 100%;
     height: 207px;
 
 }
@@ -1696,7 +1708,7 @@ border-radius: 6px;
 }
 .kalam_why_page_wrap{
     padding: 2rem 4px;
-    gap: 6px;
+    gap: 13px;
 }
 .kalam_why_page_img{
     width: 41px;
@@ -1725,7 +1737,7 @@ border-radius: 6px;
     font-size: 19px;
 }
 .kalam_buisness_input_wrapper{
-    width: 91vw;
+    width: 95vw;
 
 }
 .kalam_buisness_form_section{
@@ -1749,7 +1761,7 @@ border-radius: 6px;
     height: 483px;
 }
 .kalam_why_page_box1{
-    height: 91.2px;
+    height: 76.2px;
 }
 .kalam_buisness_diffrent_text p{
     font-size: 18px;
