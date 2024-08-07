@@ -1149,7 +1149,7 @@ border-radius: 6px;
 }
 .kalam_buisness_success_story h2{
     text-align: center;
-    font-size: 21px;
+    font-size: 34px;
 }
 .kalam_buisness_success_story iframe{
     /* width: 100%; */
@@ -1682,9 +1682,9 @@ border-radius: 6px;
         font-size: 30px;
     }
     .kalam_buisness_feacture1{
-        width: 31vw;
+        width: 31vw !important;
         justify-content: center;
-        height: 147px;
+        height: 147px !important;
 }
 .kalam_buisness_feature_img {
     width: 112px;
@@ -1704,11 +1704,11 @@ border-radius: 6px;
 }
 .kalam_why_page_box1{
     gap: 6px;
-    width: 45vw;
+    width: 45vw !important;
 }
 .kalam_why_page_wrap{
     padding: 2rem 4px;
-    gap: 13px;
+    gap: 13px !important;
 }
 .kalam_why_page_img{
     width: 41px;
@@ -1742,7 +1742,7 @@ border-radius: 6px;
 }
 .kalam_buisness_form_section{
     height: auto;
-    width: auto;
+    width: auto !important;
 }
 .kalam_buisness_form1 select{
     height: 44px;
@@ -1767,3 +1767,351 @@ border-radius: 6px;
     font-size: 18px;
 }
 }
+/* BUISNESS PAGE CSS */
+
+
+
+/* Digital marketing PAGE CSS */
+
+.kalam_navbar2{
+    position: fixed;
+    width: 100%;
+    top: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 185px;
+    box-shadow: 2px 2px 2px gray;
+    padding: 10px;
+    box-shadow: 0px 4px 25px 0px #F96D0340;
+    background-color: #fff;
+    z-index: 9;
+}
+.kalam_navbar2 a {
+    text-decoration: none;
+    color: black;
+}
+.kalam_digital_hero_section{
+    padding-top: 3rem !important;
+    align-items: center !important;
+}
+.kalam_digital_hero_section .kalam_buisness_bottom button{
+    font-size: 15px;
+    width: 200px;
+}
+.kalam_digital_hero_section .kalam_buisness_left{
+    padding-bottom: 5rem;
+    padding-top: 0;
+}
+.kalam_digital_feature_wrap .kalam_buisness_feacture1{
+    height: 156px;
+    width: 128px;
+    justify-content: space-evenly;
+    text-align: center;
+    box-shadow: 0px 5px 20px 0px #F96D0333;
+    border-radius: 8px;
+}
+.kalam_digital_feature_wrap .kalam_buisness_feacture1 p {
+    font-size: 15px;
+    width: 100px;
+}
+.kalam_digital_feature_wrap .kalam_buisness_feature_img{
+    width: 92px;
+    padding: 10px;
+}
+.kalam_digital_form_video_section .kalam_buisness_form_section{
+    width: 335px;
+}
+.kalam_digital_form_video_section .kalam_buisness_form_section label{
+    font-size: 14px;
+}
+.kalam_digital_form_video_section .kalam_buisness_input_wrapper small{
+    font-size: 10px;
+    width: 89%;
+    color: #fff;
+}
+.kalam_digital_form_video_section .kalam_buisness_input_wrapper b{
+   color: var(--theme-color);
+}
+.kalam_digital_form_video_section .kalam_buisness_input_wrapper u{
+   color: var(--theme-color);
+}
+.kalam_digital_why_kalam .kalam_why_page_box1{
+    width: 249.31px;
+}
+.kalam_digital_why_kalam .kalam_why_page_wrap{
+    gap: 42px;
+}
+
+
+.kalam_benefits_section {
+    padding: 2rem 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.kalam_benifits_wrap_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0px;
+    row-gap: 14px;
+    text-align: left;
+}
+.kalam_benefits_box1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 461px;
+    gap: 28px;
+}
+.kalam_benefits_box_img {
+    width: 46px;
+    box-shadow: 0px 4px 20px 0px #F96D0333;
+    height: 46px;
+    border-radius: 50%;
+    padding: 10px;
+}
+.kalam_benefits_box_img img {
+    width: 100%;
+    height: 100%;
+}
+.kalam_benefits_text {
+    width: 317px;
+    background: #F96D03CC;
+    border-radius: 9px;
+    padding: 5px 11px;
+    color: #fff;
+    height: 45.2px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.kalam_reuse_partner_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 0px;
+    text-align: center;
+}
+.kalam_reuse_partner_section_item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 62%;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 151px;
+    padding: 2rem 0px;
+    row-gap: 52px;
+}
+.kalam_reuse_partner_box1 {
+    box-shadow: 0px 4px 20px 0px #F96D0333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px;
+    height: 142px;
+    border-radius: 12px;
+}
+.kalam_reuse_partner_img1 {
+    width: 42px;
+    height: 42px;
+    background: var(--theme-color);
+    border-radius: 50%;
+    padding: 5px;
+}
+.kalam_reuse_partner_img1 img {
+    width: 100%;
+    height: 100%;
+}
+
+
+#topicDiv1,
+#topicDiv2, 
+#topicDiv3, 
+#topicDiv4, 
+#topicDiv5, 
+#topicDiv6, 
+#topicDiv7, 
+#topicDiv8, 
+#topicDiv9, 
+#topicDiv10, 
+#topicDiv11, 
+#topicDiv12{
+    display: none;
+}
+
+#topic1:checked ~ #topicDiv1,
+#topic2:checked ~ #topicDiv2,
+#topic3:checked ~ #topicDiv3,
+#topic4:checked ~ #topicDiv4,
+#topic5:checked ~ #topicDiv5,
+#topic6:checked ~ #topicDiv6,
+#topic7:checked ~ #topicDiv7,
+#topic8:checked ~ #topicDiv8,
+#topic9:checked ~ #topicDiv9,
+#topic10:checked ~ #topicDiv10,
+#topic11:checked ~ #topicDiv11,
+#topic12:checked ~ #topicDiv12{
+    display: block;
+}
+/* #faq1:checked + label + #faqDiv1,
+#faq2:checked + label + #faqDiv2,
+#faq3:checked + label + #faqDiv3,
+#faq4:checked + label + #faqDiv4,
+#faq5:checked + label + #faqDiv5,
+#faq6:checked + label + #faqDiv6,
+#faq7:checked + label + #faqDiv7,
+#faq8:checked + label + #faqDiv8{
+    display: block;
+} */
+
+.kalam_digital_syllabus_video {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2rem 0px;  
+    gap: 33px
+}
+.kalam_reuse_syllabus{
+    border: 0.8px solid #F96D03;
+border-top-right-radius: 23px;
+border-top-left-radius: 23px;
+width: 355px;
+overflow: hidden;
+}
+.kalam_reuse_syllabus label{
+        font-size: 12px;
+}
+.kalam_reuse_syllabus1 input{
+    display: none;
+}
+.kalam_reuse_syllabus1{
+    border: 1px solid #F96D03;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    color: black;
+    background: #fff;
+    border-top-right-radius: 20px;
+    border-top-right-radius: 14px;
+    border-top-left-radius: 14px;
+}
+.kalam_reuse_syllabus1:nth-child(even){
+    border: none;
+    background: black;
+    color: #fff;
+    border-top-right-radius: 20px;
+    border-top-right-radius: 14px;
+    border-top-left-radius: 14px;
+}
+.kalam_reuse_topic_content p{
+    color: #fff;
+}
+.kalam_reuse_topic_head {
+    padding: 15px;
+}
+.kalam_reuse_topic_content {
+    padding: 9px;
+    padding-left: 20px;
+    font-size: 14px;
+    background: var(--theme-color);
+}
+.kalam_Syllabus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0px;
+    padding-bottom: 1rem;
+}
+
+
+
+.kalam_Syllabus p{
+     text-align: center;
+}
+.kalam_reuse_syllabus1 p{
+    text-align: unset;
+}
+.kalam_reuse_partner_box1 p{
+    font-size: 12px;
+    font-weight: 600;
+}
+.partner_company{
+    width: 54px;
+}
+.partner_company img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.kalam_reuse_partner_box1{
+    width: 115.6px;
+}
+@media (max-width: 600px) {
+   .kalam_digital_form_video_section .kalam_buisness_form_section {
+        height: 515px;
+    }
+    .kalam_digital_form_video_section .kalam_buisness_input_wrapper small {
+        font-size: 15px;
+    }
+    .kalam_benefits_box1{
+        width: 100%;
+        gap: 0;
+    }
+    .kalam_navbar2 a:hover{
+        color: #fff;
+        background: var(--theme-color);
+        border: transparent;
+    }
+    .kalam_reuse_syllabus{
+        width: 97%;
+    }
+    .kalam_reuse_video{
+        width: 94%;
+        height: 201px;
+    }
+    .kalam_reuse_video iframe {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .kalam_navbar2 {
+        position: fixed;
+        display: unset;
+        width: 100%;
+        top: 55px;
+        padding: 10px;
+        box-shadow: unset;
+        overflow: scroll;
+        white-space: nowrap;
+    }
+    .kalam_navbar2 a {
+        border: 2px solid #e4e4e4;
+        border-radius: 13px;
+        padding: 8px;
+        display: inline-block;
+    }
+    .kalam_digital_hero_section .kalam_buisness_left{
+        padding-bottom: 0;
+    }
+    .kalam_digital_hero_section{
+        padding-top: 7rem !important;
+    }
+    .kalam_benefits_section {
+        padding: 0rem 0px;
+    }
+    .kalam_reuse_partner_section_item {
+        width: 100%;
+        row-gap: unset;
+        gap: 2vw;
+    
+    }
+}
+/* Digital marketing PAGE CSS */

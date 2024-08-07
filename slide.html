@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .owl-carousel .item {
+    height: 10rem;
+    background: #4DC7A0;
+    padding: 1rem;
+}
+
+.owl-carousel__nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.owl-carousel__nav > div {
+    background: #aba9a9;
+    color: #fff;
+    padding: 8px 15px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+    </style>
+</head>
+<body>
+    <div class="owl-carousel owl-theme">
+        <div class="item"><h4>Slide 1</h4></div>
+        <div class="item"><h4>Slide 2</h4></div>
+        <div class="item"><h4>Slide 3</h4></div>
+        <div class="item"><h4>Slide 4</h4></div>
+    </div>
+    <div class="owl-carousel__nav">
+      <div class="owl-carousel__prev">prev</div>
+      <div class="owl-carousel__next">next</div>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> -->
+    <script>
+        $(document).ready(function(){
+  const owl = $('.owl-carousel')
+  owl.owlCarousel({
+    loop:true,
+    margin:5,
+    nav:false,
+    items: 1,
+    dots: true
+  });
+  
+  // Custom Nav
+  
+  $('.owl-carousel__next').click(() => owl.trigger('next.owl.carousel'))
+  
+  $('.owl-carousel__prev').click(() => owl.trigger('prev.owl.carousel'))
+})
+    </script>
+</body>
+</html>
