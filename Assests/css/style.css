@@ -1534,7 +1534,11 @@ border-radius: 6px;
 #faqDiv7, 
 #faqDiv8,
 #faqDiv9,
-#faqDiv10{
+#faqDiv10,
+#faqDiv11,
+#faqDiv12,
+#faqDiv13,
+#faqDiv14{
     display: none;
 }
 
@@ -1557,7 +1561,11 @@ border-radius: 6px;
 #faq7:checked + label + #faqDiv7,
 #faq8:checked + label + #faqDiv8,
 #faq9:checked + label + #faqDiv9,
-#faq10:checked + label + #faqDiv10{
+#faq10:checked + label + #faqDiv10,
+#faq11:checked + label + #faqDiv11,
+#faq12:checked + label + #faqDiv12,
+#faq13:checked + label + #faqDiv13,
+#faq14:checked + label + #faqDiv14{
     display: block;
 }
 
@@ -1618,6 +1626,9 @@ border-radius: 6px;
     .kalam_buisness_different_box{
         margin-bottom: 34px;
     }
+    .kalam_buisness_banner_section {
+        background-image: url(../img/kalam_buisness_banner_small.jpeg);
+    }
     .direction2{
         transform: rotate(90deg);
         top: -267px;
@@ -1654,7 +1665,7 @@ border-radius: 6px;
         font-size: 32px;
     }
     .kalam_banner_bottom button{
-        font-size: 17px;
+        font-size: 14px;
     }
     .kalam_buisness_feature_wrap{
         gap: 10px;
@@ -1704,7 +1715,11 @@ border-radius: 6px;
 
 }
 .kalam_buisness_banner_section{
-        padding-left: 2rem;
+        padding-left: 10rem;
+        text-align: center;
+        padding-right: 0;
+        padding-bottom: 10px;
+        padding-top: 14px;
         text-align: center;
 }
 .kalam_why_page_box1{
@@ -2292,8 +2307,10 @@ overflow: hidden;
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    border-radius: 17px;
+    border-radius: 31px;
     transform: rotate(308deg);
+    height: 152px;
+    width: 146px;
 }
 .kalam_web_img {
     width: 90px;
@@ -2319,7 +2336,8 @@ overflow: hidden;
 }
 .item4{
     position: relative;
-    left: 41px;
+    left: 114px;
+
 }
 .kalam_web_talent_wrap {
     display: flex;
@@ -2401,6 +2419,16 @@ overflow: hidden;
 .kalam_web_house_text{
     gap: 5px;
 }
+.kalam_web_faq_section .kalam_buisness_mix_head h3{
+         width: 89%;
+}
+
+.kalam_web_hero_section{
+    padding-top: 7rem !important;
+}
+.kalam_web_hero_section .kalam_buisness_right {
+    width: 437px;
+}
 @media (max-width: 600px) {
  .item2{
     position: unset;
@@ -2431,10 +2459,13 @@ overflow: hidden;
     padding: 0;
  }
  .kalam_web_banner_section h2{
-    font-size: 27px;
+    font-size: 18px;
  }
  .kalam_web_talent_box1{
     width: 37vw;
+ }
+ .kalam_banner_bottom p{
+    font-size: 17px;
  }
  .kalam_web_talent_wrap{
     gap: 41px;

@@ -1,110 +1,196 @@
+// iframe YT code start
+          
+let ashInterval;
+let count1 = 0;
+//QbBpo1zv3TM
+const players = [
+    { id: 'player1', videoId: 'JFtMkRVQ-fo', player: null },
+    { id: 'player2', videoId: '1ZV4k1_kAek', player: null },
+    { id: 'player3', videoId: '79annCWsSdU', player: null },
+    { id: 'player4', videoId: 'WNxRRzslAVE', player: null },
+    { id: 'player5', videoId: 'cld4S71OAfw', player: null },
+    { id: 'player6', videoId: 'QSUYiF8xrNM', player: null }
 
-// const arrowRight = document.getElementById("arrowRight");
-// const arrowLeft = document.getElementById("arrowLeft");
-// const list = document.getElementById("list");
-// const valueItemNumber = document.getElementById("itemNumber");
-// const valueItemNumberMax = valueItemNumber.ariaValueMax;
-// const defaultItemNumber = 3;
-// const initialNumberItems = list.children.length;
-// const itemNumberMess = document.getElementById("itemNumberMess");
-// const wrapper = document.querySelector(".slider__wrapper");
-// const wrapperWidth = wrapper.offsetWidth;
-// const numVisibleItems = 3;
-// let centralItem = 2;
-// let itemNumberValue = parseInt(valueItemNumber.value);
+    
+];
 
-
-// const initialItemNumberValue = itemNumberValue || defaultItemNumber;
-// let itemNumber = calculatePercentItemNumber(initialItemNumberValue);
-// resetItems(itemNumber);
-
-
-// function calculatePercentItemNumber(num) {
-// return num ? 100 / num : 100 / defaultItemNumber;
-// }
-
-// function listNumber(inputNumber) {
-// const message =
-// inputNumber >= 6
-// ? "You reached the maximum number of items"
-// : `Changed to ${inputNumber}`;
-// itemNumberMess.textContent = message;
-// }
-
-// function resetItems(number) {
-// const sliderItems = document.querySelectorAll(".slider__item");
-// sliderItems.forEach((item) => (item.style.width = `${number}%`));
-// itemNumber = number;
-// }
-
-// function calculateCentralItem(numVisibleItems) {
-// const centralItem = Math.ceil(numVisibleItems / 2);
-// return centralItem;
-// }
-
-// function addActiveElement(centralItem, totalVisibleItems) {
-
-// const sliderItems = document.querySelectorAll(".slider__item");
-// sliderItems.forEach((item) =>
-// item.querySelector(".slider__content").classList.remove("active")
-// );
+function onYouTubeIframeAPIReady() {
+    players.forEach(item => {
+        item.player = new YT.Player(item.id, {
+            height: '315',
+            width: '560',
+            videoId: item.videoId,
+            events: {
+                'onReady': onPlayerReady
+            }
+        });
+    });
+}
 
 
-// const central = sliderItems[Math.floor(centralItem)];
-// central.querySelector(".slider__content").classList.add("active");
+function onPlayerReady(event) {
+    const player = event.target;
+    player.mute();
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const playerId = entry.target.id;
+            const playerData = players.find(item => item.id === playerId);
 
-// if (totalVisibleItems % 2 === 0) {
-// const central2 = sliderItems[Math.floor(centralItem) + 1];
-// central2.querySelector(".slider__content").classList.add("active");
+            if (entry.isIntersecting && playerData) {
+                playerData.player.playVideo();
+                ashInterval = setInterval(()=>{
+                    if ( checkElement(document.getElementById(playerData.id)) ) {
+                        playerData.player.unMute();
+                        playerData.player.playVideo();
+                        if (playerData.player.getPlayerState() == 1) {
+                            count1++;
+                            if(count1 == 5) {
+                                clearInterval(ashInterval);
+                                count1 = 1 ;
+                            }
+                        }
+                    } 
+                },1000);
+            } else {
+                playerData.player.pauseVideo();
+            }
+        });
+    }, { threshold: 0.5, passive: true });
+    observer.observe(player.getIframe());
+}
 
-// if (totalVisibleItems == 2) {
-// const central3 = sliderItems[Math.floor(centralItem) - 1];
-// central3.querySelector(".slider__content").classList.add("active");
-// }
-// }
-// }
+
+function checkElement(el) {
+  var top = el.offsetTop;
+  var left = el.offsetLeft;
+  var width = el.offsetWidth;
+  var height = el.offsetHeight;
+
+  while(el.offsetParent) {
+    el = el.offsetParent;
+    top += el.offsetTop;
+    left += el.offsetLeft;
+  }
+
+  return (
+    top >= window.pageYOffset &&
+    left >= window.pageXOffset &&
+    (top + height) <= (window.pageYOffset + window.innerHeight) &&
+    (left + width) <= (window.pageXOffset + window.innerWidth)
+  );
+}
+
+// iframe YT code end
 
 
-// valueItemNumber.addEventListener("input", function () {
-// itemNumberValue = parseInt(valueItemNumber.value);
-// listNumber(itemNumberValue);
-// const newPercentage = calculatePercentItemNumber(itemNumberValue);
-// resetItems(newPercentage);
-// centralItem = calculateCentralItem(itemNumberValue);
-// addActiveElement(centralItem - 1, itemNumberValue);
-// });
 
-// arrowRight.addEventListener("click", moveFirstToEnd);
-// arrowLeft.addEventListener("click", moveLastToStart);
 
-// function moveFirstToEnd() {
-// const firstItem = list.firstElementChild;
-// firstItem.style.marginLeft = `calc(-${itemNumber}%)`;
+const arrowRight = document.getElementById("arrowRight");
+const arrowLeft = document.getElementById("arrowLeft");
+const list = document.getElementById("list");
+const valueItemNumber = document.getElementById("itemNumber");
+const valueItemNumberMax = valueItemNumber.ariaValueMax;
+const defaultItemNumber = 3;
+const initialNumberItems = list.children.length;
+const itemNumberMess = document.getElementById("itemNumberMess");
+const wrapper = document.querySelector(".slider__wrapper");
+const wrapperWidth = wrapper.offsetWidth;
+const numVisibleItems = 3;
+let centralItem = 2;
+let itemNumberValue = parseInt(valueItemNumber.value);
 
-// if (firstItem) {
-// setTimeout(() => {
-// firstItem.style.marginLeft = "";
-// list.appendChild(firstItem);
-// }, 300);
-// }
-// addActiveElement(centralItem, itemNumberValue);
-// }
 
-// function moveLastToStart() {
-// const lastItem = list.lastElementChild;
-// list.removeChild(lastItem);
-// list.insertBefore(lastItem, list.firstElementChild);
-// const newFirstItem = list.firstElementChild;
+const initialItemNumberValue = itemNumberValue || defaultItemNumber;
+let itemNumber = calculatePercentItemNumber(initialItemNumberValue);
+resetItems(itemNumber);
 
-// if (newFirstItem) {
-// newFirstItem.style.marginLeft = `calc(-${itemNumber}%)`;
-// setTimeout(() => {
-// newFirstItem.style.marginLeft = "";
-// }, 1);
-// }
 
-// addActiveElement(centralItem - 1, itemNumberValue);
-// }
+function calculatePercentItemNumber(num) {
+return num ? 100 / num : 100 / defaultItemNumber;
+}
+
+function listNumber(inputNumber) {
+const message =
+inputNumber >= 6
+? "You reached the maximum number of items"
+: `Changed to ${inputNumber}`;
+itemNumberMess.textContent = message;
+}
+
+function resetItems(number) {
+const sliderItems = document.querySelectorAll(".slider__item");
+sliderItems.forEach((item) => (item.style.width = `${number}%`));
+itemNumber = number;
+}
+
+function calculateCentralItem(numVisibleItems) {
+const centralItem = Math.ceil(numVisibleItems / 2);
+return centralItem;
+}
+
+function addActiveElement(centralItem, totalVisibleItems) {
+
+const sliderItems = document.querySelectorAll(".slider__item");
+sliderItems.forEach((item) =>
+item.querySelector(".slider__content").classList.remove("active")
+);
+
+
+const central = sliderItems[Math.floor(centralItem)];
+central.querySelector(".slider__content").classList.add("active");
+
+if (totalVisibleItems % 2 === 0) {
+const central2 = sliderItems[Math.floor(centralItem) + 1];
+central2.querySelector(".slider__content").classList.add("active");
+
+if (totalVisibleItems == 2) {
+const central3 = sliderItems[Math.floor(centralItem) - 1];
+central3.querySelector(".slider__content").classList.add("active");
+}
+}
+}
+
+
+valueItemNumber.addEventListener("input", function () {
+itemNumberValue = parseInt(valueItemNumber.value);
+listNumber(itemNumberValue);
+const newPercentage = calculatePercentItemNumber(itemNumberValue);
+resetItems(newPercentage);
+centralItem = calculateCentralItem(itemNumberValue);
+addActiveElement(centralItem - 1, itemNumberValue);
+});
+
+arrowRight.addEventListener("click", moveFirstToEnd);
+arrowLeft.addEventListener("click", moveLastToStart);
+
+function moveFirstToEnd() {
+const firstItem = list.firstElementChild;
+firstItem.style.marginLeft = `calc(-${itemNumber}%)`;
+
+if (firstItem) {
+setTimeout(() => {
+firstItem.style.marginLeft = "";
+list.appendChild(firstItem);
+}, 300);
+}
+addActiveElement(centralItem, itemNumberValue);
+}
+
+function moveLastToStart() {
+const lastItem = list.lastElementChild;
+list.removeChild(lastItem);
+list.insertBefore(lastItem, list.firstElementChild);
+const newFirstItem = list.firstElementChild;
+
+if (newFirstItem) {
+newFirstItem.style.marginLeft = `calc(-${itemNumber}%)`;
+setTimeout(() => {
+newFirstItem.style.marginLeft = "";
+}, 1);
+}
+
+addActiveElement(centralItem - 1, itemNumberValue);
+}
 
 
 
