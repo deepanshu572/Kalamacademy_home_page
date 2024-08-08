@@ -2136,6 +2136,12 @@ overflow: hidden;
         height: 57.2px;
         width: 82%;
     }
+    .kalam_reuse_partner_box1{
+        width: 161.6px !important;
+    }
+    .kalam_reuse_partner_section h2 b{
+        color: var(--theme-color);
+    }
     .kalam_digital_why_kalam .kalam_why_page_wrap{
         padding: 1rem 4px;
     }
@@ -2206,8 +2212,24 @@ overflow: hidden;
     .kalam_reuse_partner_section_item {
         width: 100%;
         row-gap: unset;
-        gap: 2vw;
+        gap: 5vw;
     
+    }
+    .kalam_buisness_mix_section{
+        gap: 26px;
+    }
+    .kalam_reuse_partner_img1 {
+        width: 52px;
+        height: 52px;
+    }
+    .partner_company {
+        width: 65px;
+    }
+    .kalam_reuse_partner_box1 p {
+        font-size: 17px;
+    }
+    .kalam_reuse_partner_box1{
+        height: 161px;
     }
     .kalam_benefits_text{
         height: 51.2px;
@@ -2223,5 +2245,211 @@ overflow: hidden;
         width: 30vw !important;
         height: 124px !important;
     }
+    .kalam_digital_form_video_section .kalam_buisness_form_section{
+        height: 420px;
+    }
 }
 /* Digital marketing PAGE CSS */
+
+
+
+/* Web development PAGE CSS */
+
+.kalam_web_hero_section .kalam_buisness_right{
+    position: unset;
+}
+
+.kalam_web_career_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 0px;
+}
+.kalam_web_career_wrap_box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 23px;
+    transform: rotate(45deg);
+    padding: 4rem 0px;
+    position: relative;
+}
+.kalam_web_item1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 73px;
+    transform: rotate(6deg);
+}
+.kalam_web_career_box1 {
+    box-shadow: 0px 7.89px 39.46px 0px #F96D0333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 17px;
+    transform: rotate(308deg);
+}
+.kalam_web_img {
+    width: 90px;
+    height: 84.14px;
+    padding: 12px;
+}
+.kalam_web_img img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.item2{
+    position: relative;
+    top: 9vw;
+    right: 4vw;
+}
+.item3{
+    position: relative;
+    bottom: 108px;
+    right: 76px;
+    bottom: 9vw;
+    right: -8vw;
+}
+.item4{
+    position: relative;
+    left: 41px;
+}
+.kalam_web_talent_wrap {
+    display: flex;
+    align-items: center;
+    gap: 41px;
+    padding: 16px;
+    flex-wrap: wrap;
+}
+.kalam_web_talent_student {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0px;
+    text-align: center;
+}
+.kalam_web_talent_box1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.kalam_web_talent_box1 {
+    box-shadow: 0px 7.89px 39.46px 0px #F96D0333;
+    width: 188px;
+    border-radius: 24px;
+    padding: 17px;
+}
+.kalam_web_house_box_wrap {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    padding: 1rem 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.kalam_web_house_placement_section h2 b{
+    color: var(--theme-color);
+}
+.kalam_web_house_placement_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 0px;
+}
+.kalam_web_house_box1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 7.23px 20px 0px #F96D0333;
+    width: 175px;
+    padding: 10px;
+}
+.kalam_web_house_img {
+    width: 104px;
+    box-shadow: 0px 7.23px 9.04px 0px #FA7F22CC;
+    height: 104px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.kalam_web_house_img img {
+    width: 100%;
+    height: 100%;
+}
+.kalam_web_house_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 9px;
+}
+.kalam_web_house_text h3 {
+    font-size: 13px;
+}
+.kalam_web_house_text  p{
+    font-size: 13px;
+    color: var(--theme-color);
+}
+.kalam_web_house_text{
+    gap: 5px;
+}
+@media (max-width: 600px) {
+ .item2{
+    position: unset;
+ }
+ .item3{
+    position: unset;
+ }
+ .item4{
+    position: unset;
+ }
+ .kalam_web_career_box1 {
+    transform: unset;
+    width: 42vw;
+    height: 145.74px;
+ }
+ .kalam_web_item1{
+    transform: unset;
+    gap: 16px;
+ }
+ .kalam_web_career_wrap_box{
+    transform: unset;
+    padding: 3rem 0px;
+ }
+ .kalam_web_career_section{
+    padding: 2rem 0px;
+ }
+ .kalam_web_benefits_section h2{
+    padding: 0;
+ }
+ .kalam_web_banner_section h2{
+    font-size: 27px;
+ }
+ .kalam_web_talent_box1{
+    width: 37vw;
+ }
+ .kalam_web_talent_wrap{
+    gap: 41px;
+ }
+ .kalam_web_house_box_wrap {
+    gap: 16px;
+ }
+ .kalam_web_house_box1{
+    width: 45vw;
+ }
+ .kalam_web_house_text h3 {
+    font-size: 14px;
+}
+.kalam_web_house_text p {
+    font-size: 14px;
+}
+}
+/* Web development PAGE CSS */
