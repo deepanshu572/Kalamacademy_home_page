@@ -2109,7 +2109,7 @@ overflow: hidden;
         height: 515px;
     }
     .kalam_digital_form_video_section .kalam_buisness_input_wrapper small {
-        font-size: 15px;
+        font-size: 13px;
     }
     .kalam_benefits_box1{
         width: 100%;
@@ -2131,6 +2131,31 @@ overflow: hidden;
         font-size: 19px;
         width: 229px;
     
+    }
+    .kalam_digital_benefits_section .kalam_benefits_text{
+        height: 57.2px;
+        width: 82%;
+    }
+    .kalam_digital_why_kalam .kalam_why_page_wrap{
+        padding: 1rem 4px;
+    }
+    .kalam_Syllabus p{
+        padding: 0px 17px;
+    }
+    .kalam_digital_benefits_section .kalam_benifits_wrap_box{
+        padding: 2rem 0px;
+    }
+    .kalam_digital_benefits_section h2{
+        padding: 0px 22px;
+    }
+    .kalam_Syllabus{
+        padding-bottom: 0rem;
+    }
+    .kalam_digital_why_kalam{
+        padding: 1rem 0px;
+    }
+    .kalam_digital_success_story .kalam_buisness_success_story{
+        padding: 1rem 0px;
     }
     .kalam_reuse_video{
         width: 94%;
@@ -2167,12 +2192,16 @@ overflow: hidden;
         padding-top: 7rem !important;
         gap: 0;
     }
+    .kalam_buisness_form_video_section{
+        padding-top: 0;
+    }
     .kalam_benefits_section {
         padding: 0rem 0px;
     }
     .kalam_buisness_right{
         position: relative;
         left: -17px;
+        top: -26px;
     }
     .kalam_reuse_partner_section_item {
         width: 100%;
