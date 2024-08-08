@@ -1,5 +1,5 @@
 // iframe YT code start
-          
+
 let ashInterval;
 let count1 = 0;
 //QbBpo1zv3TM
@@ -81,8 +81,6 @@ function checkElement(el) {
 }
 
 // iframe YT code end
-
-
 
 
 const arrowRight = document.getElementById("arrowRight");
