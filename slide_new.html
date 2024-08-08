@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Infinite Scroll</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 300px;
+}
+
+.card {
+    min-width: 300px;
+    padding: 50px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <button class="prev">Prev</button>
+        <div class="carousel">
+            <div class="card">Card 1</div>
+            <div class="card">Card 2</div>
+            <div class="card">Card 3</div>
+            <div class="card">Card 4</div>
+        </div>
+        <button class="next">Next</button>
+    </div>
+    <script>
+        const carousel = document.querySelector('.carousel');
+const cards = document.querySelectorAll('.card');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+
+let scrollAmount = 0;
+const cardWidth = cards[0].offsetWidth;
+
+nextButton.addEventListener('click', () => {
+    if (scrollAmount >= (cards.length - 1) * cardWidth) {
+        carousel.appendChild(carousel.firstElementChild);
+        scrollAmount -= cardWidth;
+    }
+    scrollAmount += cardWidth;
+    carousel.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+    });
+});
+
+prevButton.addEventListener('click', () => {
+    if (scrollAmount <= 0) {
+        carousel.prepend(carousel.lastElementChild);
+        scrollAmount += cardWidth;
+    }
+    scrollAmount -= cardWidth;
+    carousel.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+    });
+});
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

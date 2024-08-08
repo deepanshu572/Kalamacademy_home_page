@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll and Color Change</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button.active {
+    background-color: #f44336;
+}
+
+.targetSection {
+    margin-top: 100px;
+    padding: 100px;
+    background-color: #f1f1f1;
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <button class="scrollButton" data-target="section1">Scroll to Section 1</button>
+        <button class="scrollButton" data-target="section2">Scroll to Section 2</button>
+        <button class="scrollButton" data-target="section3">Scroll to Section 3</button>
+        <button class="scrollButton" data-target="section4">Scroll to Section 4</button>
+    </nav>
+    <section id="section1" class="targetSection">
+        <h1>Section 1</h1>
+    </section>
+    <section id="section2" class="targetSection">
+        <h1>Section 2</h1>
+    </section>
+    <section id="section3" class="targetSection">
+        <h1>Section 3</h1>
+    </section>
+    <section id="section4" class="targetSection">
+        <h1>Section 4</h1>
+    </section>
+    <script>
+        document.querySelectorAll('.scrollButton').forEach(button => {
+    button.addEventListener('click', function() {
+        document.getElementById(this.getAttribute('data-target')).scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            document.querySelectorAll('.scrollButton').forEach(btn => btn.classList.remove('active'));
+            const activeButton = document.querySelector(`.scrollButton[data-target="${entry.target.id}"]`);
+            activeButton.classList.add('active');
+        }
+    });
+}, options);
+
+document.querySelectorAll('.targetSection').forEach(section => {
+    observer.observe(section);
+});
+
+    </script>
+
+</body>
+</html>
