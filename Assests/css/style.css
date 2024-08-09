@@ -20,12 +20,18 @@ body{
     overflow-x: hidden;
 
 }
-.course_items{
+/* .course_items{
     display: none !important;
 }
 .course_hover:hover + .course_items{
     display: flex !important;
-}
+} */
+.course_items{
+    display: none !important;
+ }
+ .course_hover:checked + label + .course_items{
+    display: flex!important;
+ }
 
 .kalam_navbar{
     position: fixed;
@@ -514,7 +520,7 @@ body{
 }
 .kalam_awards_wrap img {
     /* width: 136px; */
-     width: 31vw; 
+     width: 34vw; 
     height: 100%;
 }
 .kalam_awards h2{
@@ -597,7 +603,7 @@ body{
     flex-direction: column;
 }
 .kalam_awards_wrap .big{
-    width: 27vw;
+    width: 30vw;
 }
 .kalam_text_svg_box{
     display: flex;
@@ -605,15 +611,13 @@ body{
     align-items: center;
 }
 .ancor-wrap{
-        /* width: 50%; */
-        margin-left: 48px;
-        border: 2px solid var(--theme-color);
-        padding: 9px 15px;
-        border-radius: 24px;
-        background: black;
-        color: #fff;
-        font-size: 20px;
-    
+    margin-left: 2px;
+    border: 2px solid var(--theme-color);
+    padding: 9px 15px;
+    border-radius: 24px;
+    background: black;
+    color: #fff;
+    font-size: 22px; 
 }
 .foot-last{
     position: fixed;
@@ -632,7 +636,7 @@ body{
     text-decoration: none;
 }
 .foot-last-icon1 svg {
-    width: 39px;
+    width: 51px;
     padding: 2px;
 }
 .footer_text{
@@ -666,7 +670,9 @@ body{
 .radio_input[type="radio"]:checked:before {
     background: var(--theme-color);
 }
-
+.kalam_navbar2::-webkit-scrollbar{
+    display: none;
+}
 .radio_input[type="radio"]:checked {
     border: 1.5px solid;
   border-color:var(--theme-color);
@@ -1183,11 +1189,14 @@ border-radius: 6px;
     gap: 40px;
 }
 .kalam_bottom_img{
-    width: 33px;
+    width: 40px;
 }
 .kalam_bottom_img img{
     width: 100%;
     height: 100%;
+}
+.kalam_buisness_bottom_text p{
+    font-size: 20px;
 }
 .kalam_buisness_bottom_text {
     display: flex;
@@ -1200,6 +1209,9 @@ border-radius: 6px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     justify-content: center;
+}
+.kalam_Syllabus h2 b{
+    color: var(--theme-color);
 }
 .kalam_buisness_wrap_items {
     display: flex;
@@ -1394,10 +1406,12 @@ border-radius: 6px;
     font-weight: 500;
 }
 .kalam_buisness_mix_content p {
-    font-size: 14px;
+    font-size: 16px;
 }
 .kalam_buisness_mix_head svg{
     color: var(--theme-color);
+    width: 25px;
+    height: 25px;
 }
 .kalam_buisness_mix_content{
     box-shadow: 0px 4px 10px 0px #0000001A;
@@ -1628,7 +1642,7 @@ border-radius: 6px;
         left: -140px;
     }
     .kalam_buisness_faq_section_wrap{
-        padding: 2rem 0px;
+        padding: 1rem 0px;
         gap: 18px;
     }
     .kalam_buisness_different_box{
@@ -1636,6 +1650,9 @@ border-radius: 6px;
     }
     .kalam_buisness_banner_section {
         background-image: url(../img/kalam_buisness_banner_small.jpeg);
+    }
+    .kalam_reuse_partner_section{
+        padding-bottom: 0 !important;
     }
     .direction2{
         transform: rotate(90deg);
@@ -1670,7 +1687,8 @@ border-radius: 6px;
         width: 123px;
     }
     .kalam_buisness_banner_section h2 {
-        font-size: 32px;
+        font-size: 18px;
+
     }
     .kalam_banner_bottom button{
         font-size: 14px;
@@ -1984,18 +2002,18 @@ border-radius: 6px;
     display: none;
 }
 
-#topic1:checked ~ #topicDiv1,
-#topic2:checked ~ #topicDiv2,
-#topic3:checked ~ #topicDiv3,
-#topic4:checked ~ #topicDiv4,
-#topic5:checked ~ #topicDiv5,
-#topic6:checked ~ #topicDiv6,
-#topic7:checked ~ #topicDiv7,
-#topic8:checked ~ #topicDiv8,
-#topic9:checked ~ #topicDiv9,
-#topic10:checked ~ #topicDiv10,
-#topic11:checked ~ #topicDiv11,
-#topic12:checked ~ #topicDiv12{
+#topic1:checked + label + #topicDiv1,
+#topic2:checked + label + #topicDiv2,
+#topic3:checked + label + #topicDiv3,
+#topic4:checked + label + #topicDiv4,
+#topic5:checked + label + #topicDiv5,
+#topic6:checked + label + #topicDiv6,
+#topic7:checked + label + #topicDiv7,
+#topic8:checked + label + #topicDiv8,
+#topic9:checked + label + #topicDiv9,
+#topic10:checked + label + #topicDiv10,
+#topic11:checked + label + #topicDiv11,
+#topic12:checked + label + #topicDiv12{
     display: block;
 }
 
@@ -2068,6 +2086,7 @@ overflow: hidden;
 }
 .kalam_reuse_syllabus1 p{
     text-align: unset;
+    font-size: 16px
 }
 .kalam_reuse_partner_box1 p{
     font-size: 12px;
@@ -2220,6 +2239,7 @@ overflow: hidden;
     .kalam_digital_hero_section{
         padding-top: 7rem !important;
         gap: 0;
+        height: 638px;
     }
     .kalam_buisness_form_video_section{
         padding-top: 0;
@@ -2452,6 +2472,15 @@ overflow: hidden;
 .course_items a {
     font-size: 15px;
 }
+.kalam_web_career_section h2 b{
+    color: var(--theme-color);
+}
+.kalam_web_talent_student h2 b{
+    color: var(--theme-color);
+}
+.kalam_reuse_certificate_section h2 b{
+    color: var(--theme-color);
+}
 @media (max-width: 600px) {
  .item2{
     position: unset;
@@ -2473,7 +2502,7 @@ overflow: hidden;
  }
  .kalam_web_career_wrap_box{
     transform: unset;
-    padding: 3rem 0px;
+    padding: 1rem 0px;
  }
  .kalam_web_career_section{
     padding: 2rem 0px;
@@ -2493,6 +2522,9 @@ overflow: hidden;
  .kalam_web_talent_wrap{
     gap: 41px;
  }
+ .kalam_web_talent_student{
+    padding-top: 0;
+ }
  .kalam_web_house_box_wrap {
     gap: 16px;
  }
@@ -2503,7 +2535,14 @@ overflow: hidden;
     font-size: 14px;
 }
 .kalam_web_house_text p {
-    font-size: 14px;
+    font-size: 15px;
+    padding-top: 5px;
+}
+.kalam_web_house_placement_section{
+    padding-bottom: 0;
+}
+.kalam_reuse_partner_section_item{
+    padding-top: 20px;
 }
 }
 /* Web development PAGE CSS */
