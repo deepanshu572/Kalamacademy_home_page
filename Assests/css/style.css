@@ -90,6 +90,13 @@ body{
     background-repeat: no-repeat; 
     background-size: cover;
 }
+.kalam_index_page .kalam_right_img_section{
+    position: relative;
+    top: -99px;
+}
+.kalam_index_page{
+    height: 650px;
+}
 .kalam_left_bg{
   position: relative;
   display: none;
