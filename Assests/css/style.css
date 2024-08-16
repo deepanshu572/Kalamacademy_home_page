@@ -351,6 +351,10 @@ body{
     justify-content: center;
     padding: 1rem 0px;
 }
+.kalam_buisness_faq_section .line{
+    width: 80px;
+}
+
 .wrap_reverse{
     flex-direction: row-reverse;
 }
