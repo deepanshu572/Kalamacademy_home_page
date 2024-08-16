@@ -1,92 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scroll and Color Change</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-    font-family: Arial, sans-serif;
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    padding: 10px;
-    display: flex;
-    gap: 10px;
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-button.active {
-    background-color: #f44336;
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
-.targetSection {
-    margin-top: 100px;
-    padding: 100px;
-    background-color: #f1f1f1;
-}
+.dropdown-content a:hover {background-color: #ddd;}
 
-    </style>
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
 </head>
-<body>
-    <nav>
-        <button class="scrollButton" data-target="section1">Scroll to Section 1</button>
-        <button class="scrollButton" data-target="section2">Scroll to Section 2</button>
-        <button class="scrollButton" data-target="section3">Scroll to Section 3</button>
-        <button class="scrollButton" data-target="section4">Scroll to Section 4</button>
-    </nav>
-    <section id="section1" class="targetSection">
-        <h1>Section 1</h1>
-    </section>
-    <section id="section2" class="targetSection">
-        <h1>Section 2</h1>
-    </section>
-    <section id="section3" class="targetSection">
-        <h1>Section 3</h1>
-    </section>
-    <section id="section4" class="targetSection">
-        <h1>Section 4</h1>
-    </section>
-    <script>
-        document.querySelectorAll('.scrollButton').forEach(button => {
-    button.addEventListener('click', function() {
-        document.getElementById(this.getAttribute('data-target')).scrollIntoView({ behavior: 'smooth' });
-    });
-});
+<body style="background-color:white;">
 
-const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5
-};
+<h2>Hoverable Dropdown</h2>
+<p>Move the mouse over the button to open the dropdown menu.</p>
 
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            document.querySelectorAll('.scrollButton').forEach(btn => btn.classList.remove('active'));
-            const activeButton = document.querySelector(`.scrollButton[data-target="${entry.target.id}"]`);
-            activeButton.classList.add('active');
-        }
-    });
-}, options);
-
-document.querySelectorAll('.targetSection').forEach(section => {
-    observer.observe(section);
-});
-
-    </script>
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
 
 </body>
 </html>

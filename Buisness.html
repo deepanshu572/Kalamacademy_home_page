@@ -8,17 +8,24 @@
 </head>
 <body>
     <div class="main">
-        <div class="kalam_navbar">
-            <div class="kalam_nav1">
-                <img src="Assests/img/kalam_header_logo.png" alt="kalam_header_logo">
-            </div>
-            <div class="kalam_nav2">
-                <a href="index.html">Courses <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
-                  </svg></a>
-                <a href="Buisness.html">Buisness</a>
-            </div>
+      <div class="kalam_navbar">
+        <div class="kalam_nav1">
+          <a href="index.html"><img src="Assests/img/kalam_header_logo.png" alt="kalam_header_logo"></a> 
         </div>
+        <div class="kalam_nav2">
+              <div class="dropdown nav1">
+                <button class="dropbtn">Courses <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                </svg></button>
+                <div class="dropdown-content">
+                  <a href="web_development.html">Web development</a>
+                  <a href="Digital_marketing.html">Digital marketing</a>
+                </div>
+              </div>
+            <a href="Buisness.html">Buisness</a>
+           
+        </div>
+    </div>
         <div class="kalam_buisness_hero_section">
             <div class="kalam_buisness_left">
                 <div class="kalam_buisness_top">
@@ -101,7 +108,7 @@
                       <option value="400">400</option>
                     </select>
                   </div>
-                   <button>FREE CONSULTANCY</button>
+                   <button class="buisness_btn">FREE CONSULTANCY</button>
                 </div>
           </div>
         </div>
@@ -153,12 +160,13 @@
           <iframe width="560" height="315" src="https://www.youtube.com/embed/cld4S71OAfw?si=ELW28sDgGqMoWRqS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           <div class="content__wrapper">
             <div class="selection">
-              <label for="itemNumber">Choose the number of items in the slider: </label>
-              <input type="number" value="3" min="1" max="6" id="itemNumber">
-              <p id="itemNumberMess"></p>
+              <label for="itemNumber1">Choose the number of items in the slider: </label>
+              <input type="number" value="3" min="1" max="6" id="itemNumber1">
+              <p id="itemNumberMess1"></p>
             </div>
-            <div class="slider">
-              <div class="slider__wrapper" id="list">
+            <div class="slider slider__wrapper1">
+              <div class="slider__wrapper" id="list1">
+                
                 <div class="slider__item">
                   <div class="slider__content kalam_buisness_box">
                     <div class="kalam_buisness_wrap_items">
@@ -225,15 +233,18 @@
                   </div>
             </div>
             <div class="slider__controls">
-                <button class="slider__left" type="button" id="arrowLeft">
+                <button class="slider__left1" type="button" id="arrowLeft1">
+                <!-- <button class="slider__left" type="button" id="backBtn"> -->
 
                </button>
-                <button class="slider__right" type="button" id="arrowRight">
+                <button class="slider__right1" type="button" id="arrowRight1">
+                <!-- <button class="slider__right" type="button" id="nextBtn"> -->
                 
                </button>
               </div>
           </div>
           </div>
+          
         </div>
         <div class="kalam_buisness_development">
           <h2><b>Development</b> Process</h2>

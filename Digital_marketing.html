@@ -9,17 +9,24 @@
 </head>
 <body>
     <div class="main">
-        <div class="kalam_navbar">
-            <div class="kalam_nav1">
-                <img src="Assests/img/kalam_header_logo.png" alt="kalam_header_logo">
-            </div>
-            <div class="kalam_nav2">
-                <a href="index.html">Courses <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
-                  </svg></a>
-                <a href="Buisness.html">Buisness</a>
-            </div>
+      <div class="kalam_navbar">
+        <div class="kalam_nav1">
+          <a href="index.html"><img src="Assests/img/kalam_header_logo.png" alt="kalam_header_logo"></a> 
         </div>
+        <div class="kalam_nav2">
+              <div class="dropdown nav1">
+                <button class="dropbtn">Courses <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                </svg></button>
+                <div class="dropdown-content">
+                  <a href="web_development.html">Web development</a>
+                  <a href="Digital_marketing.html">Digital marketing</a>
+                </div>
+              </div>
+            <a href="Buisness.html">Buisness</a>
+           
+        </div>
+    </div>
         <div class="kalam_navbar2">
           <button class="scrollButton" data-target="section1">Student Review</button>
           <button class="scrollButton" data-target="section2">Syllabus</button>
@@ -149,17 +156,37 @@
             </div>
           </div>
         </div>
+        <div id="section1"></div>
         <div class="kalam_buisness_success_story kalam_digital_success_story">
             <h2>Digital Marketing Training In Ranchi : <b>Success Stories</b><div class="line"></div></h2>
-             <div id="player5"></div>
+            <div class="slider__wrapper slider__wrapper3">
+              <div id="list3" class="slider__list">
+                  <div class="slider__item"><div class="slider__content">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TCIRB7EKXqs?si=jVTOut_cDpMROTTa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div></div>
+                  <div class="slider__item"><div class="slider__content active"><div id="player5"></div></div></div>
+                  <div class="slider__item"><div class="slider__content">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/WLEruSGsGxQ?si=y1Md7sBttlJzAIsT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div></div>
+              </div>
+          </div>
+          <div class="slider__controls">
+              <button id="arrowLeft3"></button>
+              <input class="none" type="range" id="itemNumber3" min="1" max="5" value="3" aria-valuemax="5">
+              <button id="arrowRight3"></button>
+          </div>
+          <div id="itemNumberMess3"></div>
+      
+
+            <!-- <div id="player5"></div> -->
             <div class="content__wrapper">
               <div class="selection">
-                <label for="itemNumber">Choose the number of items in the slider: </label>
-                <input type="number" value="3" min="1" max="6" id="itemNumber">
-                <p id="itemNumberMess"></p>
+                <label for="itemNumber1">Choose the number of items in the slider: </label>
+                <input type="number" value="3" min="1" max="6" id="itemNumber1">
+                <p id="itemNumberMess1"></p>
               </div>
-              <div class="slider">
-                <div class="slider__wrapper " id="list">
+              <div class="slider slider__wrapper1">
+                <div class="slider__wrapper" id="list1">
                   
                   <div class="slider__item">
                     <div class="slider__content kalam_buisness_box">
@@ -227,11 +254,11 @@
                     </div>
               </div>
               <div class="slider__controls">
-                  <button class="slider__left" type="button" id="arrowLeft">
+                  <button class="slider__left1" type="button" id="arrowLeft1">
                   <!-- <button class="slider__left" type="button" id="backBtn"> -->
   
                  </button>
-                  <button class="slider__right" type="button" id="arrowRight">
+                  <button class="slider__right1" type="button" id="arrowRight1">
                   <!-- <button class="slider__right" type="button" id="nextBtn"> -->
                   
                  </button>
@@ -240,7 +267,7 @@
             </div>
           </div>
           <div class="kalam_Syllabus" id="section2">
-            <h2>Digital Marketing Syllabus</h2>
+            <h2>Digital Marketing <b>Syllabus</b></h2>
             <div class="line"></div>
             <p>What You Will Learn In Digital Marketing Course In Ranchi</p>
             <div class="kalam_digital_syllabus_video">
@@ -489,107 +516,28 @@
             <p>Register For </p>
           <a href="#form_box"><button>FREE COUNSELLING</button></a>
           </div>
-        </div>
+        </div>    
+      
         <div class="kalam_reuse_certificate_section">
-          <h2>Course Completion Certificate</h2>
+          <h2>Course Completion <b>Certificate</b></h2>
+          <div class="line"></div>
           <p>Appriciate yourself for your hardwork </p>
-          <!-- <div class="content__wrapper">
-            <div class="selection">
-              <label for="itemNumber">Choose the number of items in the slider: </label>
-              <input type="number" value="3" min="1" max="6" id="itemNumber">
-              <p id="itemNumberMess"></p>
+          <div class="slider__wrapper slider__wrapper2">
+            <div id="list2" class="slider__list kalam_reuse_certificate_box">
+                <div class="slider__item"><div class="slider__content certify"><img src="Assests/img/certificate1.png" alt=""></div></div>
+                <div class="slider__item"><div class="slider__content certify active"><img src="Assests/img/certificate2.png" alt=""></div></div>
+                <div class="slider__item"><div class="slider__content certify"><img src="Assests/img/certificate3.png" alt=""></div></div>
             </div>
-            <div class="slider">
-              <div class="slider__wrapper2" id="list2">
-                
-                <div class="slider__item2">
-                  <div class="slider__content kalam_buisness_box">
-                    <div class="kalam_buisness_wrap_items">
-                    <div class="slider__image kalam-buisness_img">
-                      <img src="Assests/img/kalam_people1.png" alt=""/>
-                    </div>
-                     <h3>AMIT KUMAR SINGH</h3>
-                    <b>DOT IT Media</b>
-                    <p>Kalam Academy Ranchi ignited my 
-                      journey. Dream foreign clients. Learned freelancing now lead a team of 20+.
-                      Grateful to Kalam Academy for the transformation!</p>
-                    </div>
-                    <div class="slider__over kalam_buisness_bottom_text">
-                          <div class="kalam_bottom_img">
-                        <img src="Assests/img/kalam_scholar.png" alt="">
-                      </div>
-                     <p>Student Feedback</p>
-                      
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slider__item2">
-                    <div class="slider__content kalam_buisness_box active">
-                      <div class="kalam_buisness_wrap_items">
-                      <div class="slider__image kalam-buisness_img">
-                        <img src="Assests/img/kalam_people2.png" alt=""/>
-                      </div>
-                       <h3>SANJAY KUMAR</h3>
-                      <b>News Zarkhand</b>
-                      <p>Learned Digital Marketing at Kalam Academy Ranchi,
-                         launched New Zarkhand channel. Earned a silver button
-                          last month. Achieve your digital marketing goals with Kalam Academy 3 month
-                           course.</p>
-                      </div>
-                      <div class="slider__over kalam_buisness_bottom_text">
-                            <div class="kalam_bottom_img">
-                          <img src="Assests/img/kalam_scholar.png" alt="">
-                        </div>
-                       <p>Student Feedback</p>
-                        
-                        </div>
-                      </div>
-                    </div>
-                <div class="slider__item2">
-                  <div class="slider__content kalam_buisness_box ">
-                    <div class="kalam_buisness_wrap_items">
-                    <div class="slider__image kalam-buisness_img">
-                      <img src="Assests/img/kalam_people3.png" alt=""/>
-                    </div>
-                     <h3>AMIT KUMAR SINGH</h3>
-                    <b>DOT IT Media</b>
-                    <p>Kalam Academy Ranchi ignited my 
-                      journey. Dream foreign clients. Learned freelancing now lead a team of 20+.
-                      Grateful to Kalam Academy for the transformation!</p>
-                    </div>
-                    <div class="slider__over kalam_buisness_bottom_text">
-                          <div class="kalam_bottom_img">
-                        <img src="Assests/img/kalam_scholar.png" alt="">
-                      </div>
-                     <p>Student Feedback</p>
-                      
-                      </div>
-                    </div>
-                  </div>
-            </div>
-            <div class="slider__controls">
-                <button class="slider__left" type="button" id="arrowLeft2">
-
-               </button>
-                <button class="slider__right" type="button" id="arrowRight2">
-                
-               </button>
-              </div>
-          </div>
-          </div> -->
-          <!-- <div class="kalam_reuse_certificate_box">
-            <div class="certify">
-            <img src="Assests/img/certificate1.png" alt="">
-          </div>
-          <div class="certify">
-            <img src="Assests/img/certificate2.png" alt="">
-          </div>
-          <div class="certify">
-            <img src="Assests/img/certificate3.png" alt="">
-          </div>
-            
-          </div> -->
         </div>
+        <div class="slider__controls">
+            <button id="arrowLeft2"></button>
+            <input class="none" type="range" id="itemNumber2" min="1" max="5" value="3" aria-valuemax="5">
+            <button id="arrowRight2"></button>
+        </div>
+        <div id="itemNumberMess2"></div>
+    <div id="section3"></div>
+        </div>
+        
         <div class="kalam_reuse_partner_section">
           <h2><b>Placement Partner : </b> For Digital Marketing Course In Ranchi</h2>
           <div class="line"></div>

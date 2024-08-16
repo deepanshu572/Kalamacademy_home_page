@@ -8,7 +8,7 @@ const players = [
     { id: 'player2', videoId: '1ZV4k1_kAek', player: null },
     { id: 'player3', videoId: '79annCWsSdU', player: null },
     { id: 'player4', videoId: 'WNxRRzslAVE', player: null },
-    { id: 'player5', videoId: 'cld4S71OAfw', player: null },
+    { id: 'player5', videoId: 'wuFP8fGU2p0', player: null },
     { id: 'player6', videoId: 'QSUYiF8xrNM', player: null }
 
     
@@ -82,113 +82,123 @@ function checkElement(el) {
 
 // iframe YT code end
 
-
-const arrowRight = document.getElementById("arrowRight");
-const arrowLeft = document.getElementById("arrowLeft");
-const list = document.getElementById("list");
-const valueItemNumber = document.getElementById("itemNumber");
-const valueItemNumberMax = valueItemNumber.ariaValueMax;
-const defaultItemNumber = 3;
-const initialNumberItems = list.children.length;
-const itemNumberMess = document.getElementById("itemNumberMess");
-const wrapper = document.querySelector(".slider__wrapper");
-const wrapperWidth = wrapper.offsetWidth;
-const numVisibleItems = 3;
-let centralItem = 2;
-let itemNumberValue = parseInt(valueItemNumber.value);
+// const arrowRight2 = document.getElementById("arrowRight2");
+// const arrowLeft2 = document.getElementById("arrowLeft2");
+// const list2 = document.getElementById("list2");
+// const valueItemNumber2 = document.getElementById("itemNumber2");
+// const valueItemNumberMax2 = valueItemNumber2.ariaValueMax;
+// const defaultItemNumber2 = 3;
+// const initialNumberItems2 = list2.children.length;
+// const itemNumberMess2 = document.getElementById("itemNumberMess2");
+// let itemNumberValue2 = parseInt(valueItemNumber2.value);
 
 
-const initialItemNumberValue = itemNumberValue || defaultItemNumber;
-let itemNumber = calculatePercentItemNumber(initialItemNumberValue);
-resetItems(itemNumber);
+// const arrowRight = document.getElementById("arrowRight");
+// const arrowLeft = document.getElementById("arrowLeft");
+// const list = document.getElementById("list");
+// const valueItemNumber = document.getElementById("itemNumber");
+// const valueItemNumberMax = valueItemNumber.ariaValueMax;
+// const defaultItemNumber = 3;
+// const initialNumberItems = list.children.length;
+// const itemNumberMess = document.getElementById("itemNumberMess");
+// const wrapper = document.querySelector(".slider__wrapper");
+// const wrapperWidth = wrapper.offsetWidth;
+// const numVisibleItems = 3;
+// let centralItem = 2;
+// let itemNumberValue = parseInt(valueItemNumber.value);
 
 
-function calculatePercentItemNumber(num) {
-return num ? 100 / num : 100 / defaultItemNumber;
-}
-
-function listNumber(inputNumber) {
-const message =
-inputNumber >= 6
-? "You reached the maximum number of items"
-: `Changed to ${inputNumber}`;
-itemNumberMess.textContent = message;
-}
-
-function resetItems(number) {
-const sliderItems = document.querySelectorAll(".slider__item");
-sliderItems.forEach((item) => (item.style.width = `${number}%`));
-itemNumber = number;
-}
-
-function calculateCentralItem(numVisibleItems) {
-const centralItem = Math.ceil(numVisibleItems / 2);
-return centralItem;
-}
-
-function addActiveElement(centralItem, totalVisibleItems) {
-
-const sliderItems = document.querySelectorAll(".slider__item");
-sliderItems.forEach((item) =>
-item.querySelector(".slider__content").classList.remove("active")
-);
+// const initialItemNumberValue = itemNumberValue || defaultItemNumber;
+// let itemNumber = calculatePercentItemNumber(initialItemNumberValue);
+// resetItems(itemNumber);
 
 
-const central = sliderItems[Math.floor(centralItem)];
-central.querySelector(".slider__content").classList.add("active");
+// function calculatePercentItemNumber(num) {
+// return num ? 100 / num : 100 / defaultItemNumber;
+// }
 
-if (totalVisibleItems % 2 === 0) {
-const central2 = sliderItems[Math.floor(centralItem) + 1];
-central2.querySelector(".slider__content").classList.add("active");
+// function listNumber(inputNumber) {
+// const message =
+// inputNumber >= 6
+// ? "You reached the maximum number of items"
+// : `Changed to ${inputNumber}`;
+// itemNumberMess.textContent = message;
+// }
 
-if (totalVisibleItems == 2) {
-const central3 = sliderItems[Math.floor(centralItem) - 1];
-central3.querySelector(".slider__content").classList.add("active");
-}
-}
-}
+// function resetItems(number) {
+// const sliderItems = document.querySelectorAll(".slider__item");
+// sliderItems.forEach((item) => (item.style.width = `${number}%`));
+// itemNumber = number;
+// }
+
+// function calculateCentralItem(numVisibleItems) {
+// const centralItem = Math.ceil(numVisibleItems / 2);
+// return centralItem;
+// }
+
+// function addActiveElement(centralItem, totalVisibleItems) {
+
+// const sliderItems = document.querySelectorAll(".slider__item");
+// sliderItems.forEach((item) =>
+// item.querySelector(".slider__content").classList.remove("active")
+// );
 
 
-valueItemNumber.addEventListener("input", function () {
-itemNumberValue = parseInt(valueItemNumber.value);
-listNumber(itemNumberValue);
-const newPercentage = calculatePercentItemNumber(itemNumberValue);
-resetItems(newPercentage);
-centralItem = calculateCentralItem(itemNumberValue);
-addActiveElement(centralItem - 1, itemNumberValue);
-});
+// const central = sliderItems[Math.floor(centralItem)];
+// central.querySelector(".slider__content").classList.add("active");
 
-arrowRight.addEventListener("click", moveFirstToEnd);
-arrowLeft.addEventListener("click", moveLastToStart);
+// if (totalVisibleItems % 2 === 0) {
+// const central2 = sliderItems[Math.floor(centralItem) + 1];
+// central2.querySelector(".slider__content").classList.add("active");
 
-function moveFirstToEnd() {
-const firstItem = list.firstElementChild;
-firstItem.style.marginLeft = `calc(-${itemNumber}%)`;
+// if (totalVisibleItems == 2) {
+// const central3 = sliderItems[Math.floor(centralItem) - 1];
+// central3.querySelector(".slider__content").classList.add("active");
+// }
+// }
+// }
 
-if (firstItem) {
-setTimeout(() => {
-firstItem.style.marginLeft = "";
-list.appendChild(firstItem);
-}, 300);
-}
-addActiveElement(centralItem, itemNumberValue);
-}
 
-function moveLastToStart() {
-const lastItem = list.lastElementChild;
-list.removeChild(lastItem);
-list.insertBefore(lastItem, list.firstElementChild);
-const newFirstItem = list.firstElementChild;
+// valueItemNumber.addEventListener("input", function () {
+// itemNumberValue = parseInt(valueItemNumber.value);
+// listNumber(itemNumberValue);
+// const newPercentage = calculatePercentItemNumber(itemNumberValue);
+// resetItems(newPercentage);
+// centralItem = calculateCentralItem(itemNumberValue);
+// addActiveElement(centralItem - 1, itemNumberValue);
+// });
 
-if (newFirstItem) {
-newFirstItem.style.marginLeft = `calc(-${itemNumber}%)`;
-setTimeout(() => {
-newFirstItem.style.marginLeft = "";
-}, 1);
-}
+// arrowRight.addEventListener("click", moveFirstToEnd);
+// arrowLeft.addEventListener("click", moveLastToStart);
 
-addActiveElement(centralItem - 1, itemNumberValue);
-}
+// function moveFirstToEnd() {
+// const firstItem = list.firstElementChild;
+// firstItem.style.marginLeft = `calc(-${itemNumber}%)`;
+
+// if (firstItem) {
+// setTimeout(() => {
+// firstItem.style.marginLeft = "";
+// list.appendChild(firstItem);
+// }, 300);
+// }
+// addActiveElement(centralItem, itemNumberValue);
+// }
+
+// function moveLastToStart() {
+// const lastItem = list.lastElementChild;
+// list.removeChild(lastItem);
+// list.insertBefore(lastItem, list.firstElementChild);
+// const newFirstItem = list.firstElementChild;
+
+// if (newFirstItem) {
+// newFirstItem.style.marginLeft = `calc(-${itemNumber}%)`;
+// setTimeout(() => {
+// newFirstItem.style.marginLeft = "";
+// }, 1);
+// }
+
+// addActiveElement(centralItem - 1, itemNumberValue);
+// }
 
 
 
@@ -318,3 +328,119 @@ addActiveElement(centralItem - 1, itemNumberValue);
 });
 
 
+
+
+
+
+
+
+
+// JavaScript code for initializing sliders
+function initializeSlider(wrapperSelector, listSelector, arrowRightSelector, arrowLeftSelector, valueItemNumberSelector, itemNumberMessSelector) {
+    const wrapper = document.querySelector(wrapperSelector);
+    const list = document.querySelector(listSelector);
+    const arrowRight = document.querySelector(arrowRightSelector);
+    const arrowLeft = document.querySelector(arrowLeftSelector);
+    const valueItemNumber = document.querySelector(valueItemNumberSelector);
+    const itemNumberMess = document.querySelector(itemNumberMessSelector);
+
+    const defaultItemNumber = 3;
+    const initialNumberItems = list.children.length;
+    const wrapperWidth = wrapper.offsetWidth;
+    const numVisibleItems = 3;
+    let centralItem = 2;
+    let itemNumberValue = parseInt(valueItemNumber.value) || defaultItemNumber;
+    let itemNumber = calculatePercentItemNumber(itemNumberValue);
+
+    resetItems(itemNumber);
+
+    function calculatePercentItemNumber(num) {
+        return num ? 100 / num : 100 / defaultItemNumber;
+    }
+
+    function listNumber(inputNumber) {
+        const message = inputNumber >= 6
+            ? "You reached the maximum number of items"
+            : `Changed to ${inputNumber}`;
+        itemNumberMess.textContent = message;
+    }
+
+    function resetItems(number) {
+        const sliderItems = list.querySelectorAll(".slider__item");
+        sliderItems.forEach((item) => (item.style.width = `${number}%`));
+        itemNumber = number;
+    }
+
+    function calculateCentralItem(numVisibleItems) {
+        return Math.ceil(numVisibleItems / 2);
+    }
+
+    function addActiveElement(centralItem, totalVisibleItems) {
+        const sliderItems = list.querySelectorAll(".slider__item");
+        sliderItems.forEach((item) =>
+            item.querySelector(".slider__content").classList.remove("active")
+        );
+
+        const central = sliderItems[Math.floor(centralItem)];
+        central.querySelector(".slider__content").classList.add("active");
+
+        if (totalVisibleItems % 2 === 0) {
+            const central2 = sliderItems[Math.floor(centralItem) + 1];
+            central2.querySelector(".slider__content").classList.add("active");
+
+            if (totalVisibleItems == 2) {
+                const central3 = sliderItems[Math.floor(centralItem) - 1];
+                central3.querySelector(".slider__content").classList.add("active");
+            }
+        }
+    }
+
+    valueItemNumber.addEventListener("input", function () {
+        itemNumberValue = parseInt(valueItemNumber.value);
+        listNumber(itemNumberValue);
+        const newPercentage = calculatePercentItemNumber(itemNumberValue);
+        resetItems(newPercentage);
+        centralItem = calculateCentralItem(itemNumberValue);
+        addActiveElement(centralItem - 1, itemNumberValue);
+    });
+
+    arrowRight.addEventListener("click", moveFirstToEnd);
+    arrowLeft.addEventListener("click", moveLastToStart);
+
+    function moveFirstToEnd() {
+        const firstItem = list.firstElementChild;
+        firstItem.style.marginLeft = `calc(-${itemNumber}%)`;
+
+        if (firstItem) {
+            setTimeout(() => {
+                firstItem.style.marginLeft = "";
+                list.appendChild(firstItem);
+            }, 300);
+        }
+        addActiveElement(centralItem, itemNumberValue);
+    }
+
+    function moveLastToStart() {
+        const lastItem = list.lastElementChild;
+        list.removeChild(lastItem);
+        list.insertBefore(lastItem, list.firstElementChild);
+        const newFirstItem = list.firstElementChild;
+
+        if (newFirstItem) {
+            newFirstItem.style.marginLeft = `calc(-${itemNumber}%)`;
+            setTimeout(() => {
+                newFirstItem.style.marginLeft = "";
+            }, 1);
+        }
+
+        addActiveElement(centralItem - 1, itemNumberValue);
+    }
+}
+
+// Initialize the first slider
+initializeSlider('.slider__wrapper1', '#list1', '#arrowRight1', '#arrowLeft1', '#itemNumber1', '#itemNumberMess1');
+
+// Initialize the second slider
+initializeSlider('.slider__wrapper2', '#list2', '#arrowRight2', '#arrowLeft2', '#itemNumber2', '#itemNumberMess2');
+// Initialize the second slider
+initializeSlider('.slider__wrapper3', '#list3', '#arrowRight3', '#arrowLeft3', '#itemNumber3', '#itemNumberMess3');
