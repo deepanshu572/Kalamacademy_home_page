@@ -349,7 +349,7 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 2rem 0px;
+    padding: 1rem 0px;
 }
 .wrap_reverse{
     flex-direction: row-reverse;
