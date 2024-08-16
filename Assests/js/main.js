@@ -9,7 +9,9 @@ const players = [
     { id: 'player3', videoId: '79annCWsSdU', player: null },
     { id: 'player4', videoId: 'WNxRRzslAVE', player: null },
     { id: 'player5', videoId: 'wuFP8fGU2p0', player: null },
-    { id: 'player6', videoId: 'QSUYiF8xrNM', player: null }
+    { id: 'player6', videoId: 'QSUYiF8xrNM', player: null },
+    { id: 'player7', videoId: 'WNxRRzslAVE', player: null },
+    { id: 'player8', videoId: 'cld4S71OAfw', player: null }
 
     
 ];

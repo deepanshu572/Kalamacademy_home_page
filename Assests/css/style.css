@@ -47,12 +47,13 @@ body{
     background: var(--theme-color);
 }
 .kalam_nav1 img{
-    width: 61px;
-    height: 34px;
+    width: 71px;
+    height: 39.6px;
+
 }
 .kalam_nav2{
     display: flex;
-    gap: 16px;
+    gap: 27px;
     position: relative;
 }
 .kalam_nav2 a{
@@ -62,7 +63,6 @@ body{
 }
 .kalam_right_img_section {
     width: 500px;
-    height: 500px;
     z-index: 1;
 }
 .kalam_right_img_section img {
@@ -120,6 +120,7 @@ body{
 .kalam_left_text_section p{
     font-weight: 500;
     font-size: 15px;
+    padding-bottom: 10px;
 }
 .kalam_left_text_section button{
     background-color: var(--theme-color);
@@ -128,6 +129,7 @@ body{
     color: #fff;
     border-radius: 7px;
     font-size: 19px;
+    font-weight: bold;
 }
 .kalam_what_do{
     display: flex;
@@ -156,7 +158,7 @@ body{
     align-items: center;
     justify-content: center;
     gap: 22px;
-    padding: 3rem 0px;
+    padding: 2rem 0px;
     flex-wrap: wrap;
     z-index: 1;
 }
@@ -194,8 +196,11 @@ body{
 .kalam_what_detail_text span{
     display: flex;
     gap: 10px;
-    font-size: 15px;
+    font-size: 18px !important;
     padding-bottom: 15px;
+}
+.kalam_what_detail_text span p{
+    font-size: 18px !important;
 }
 .kalam_what_detail_text small{
     font-size: 14px;
@@ -215,8 +220,10 @@ body{
     height: 248.6px;
 }
 .update .kalam_what_detail_img {
-    width: 89px;
-    height: auto;
+    /* width: 89px;
+    height: auto; */
+    width: 77px;
+    height: 77px;
 }
 .update h3{
     padding-bottom: 27px;
@@ -287,7 +294,7 @@ body{
     height: 100%;
 }
 .kalam_second_text_section{
-    width: 212px;
+    width: 232px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -357,6 +364,7 @@ body{
     align-items: center;
     justify-content: center;
     padding: 1rem 0px;
+    padding-top: 0;
 }
 .kalam_buisness_faq_section .line{
     width: 80px;
@@ -413,7 +421,9 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
+    padding-top: 30px;
+
 }
 .kalam_vision_box {
     display: flex;
@@ -725,10 +735,43 @@ z-index: 1;
     padding-right: 7px;
     font-size: 18px;
   }
+    .kalam_right_img_section{
+        height: auto;
+    }
+    .kalam_vision{
+        padding: 1rem 0px;
+    }
+    .kalam_vision .line{
+        width: 290px;
+
+    }
 /* media query */
 @media (max-width: 2000px) and (min-width: 600px) {
+    .kalam_awards .line{
+        width: 549px;
+    }
+    .kalam_awards h2{
+        font-size: 50px;
+    }
+    .update .kalam_what_detail_text small{
+        position: relative;
+        top: 34px;
+    }
+    .kalam_what_do p{
+        font-size: 20px;
+    }
+    .kalam_what_do h2 {
+        font-size: 50px;
+    }
+    .kalam_what_do .line{
+        width: 295px;
+    }
     .kalam_vision_img {
         width: 346px;
+    }
+    .kalam_vision_center_section {
+        position: relative;
+        left: -24px;
     }
 .kalam_journey_box_wrap{
     display: flex;
@@ -738,6 +781,7 @@ z-index: 1;
 
     width: 100%;
 }
+
 .kalam_box1{
     left: 157px;
     top: 10px;
@@ -771,6 +815,8 @@ z-index: 1;
 }
 .ancor-wrap p{
     width: 118px;
+    font-weight: bold;
+    font-size: 14px;
 }
 .foot-last{
     background-color: transparent;
@@ -791,12 +837,21 @@ z-index: 1;
 .footer_text{
     padding-bottom: 10px;
     font-weight: 300;
-    font-size: 17px;
+    font-size: 14px;
 }
 .kalam_nav2 a{
     display: flex;
     align-items: center;
     gap: 7px;
+}
+.kalam_foot_head h2{
+    font-size: 30px;
+}
+.kalam_footer h2{
+    font-size: 25px;
+}
+.kalam_footer p{
+    font-size: 16px;
 }
 .kalam_awards_wrap img{
         width: 130px;
@@ -817,12 +872,16 @@ z-index: 1;
 .kalam_vision_left_section{
     flex-direction: column;
     width: auto;
+    gap: 35px;
 }
 .line{
     width: 244px;
 }
+.footer_text{
+    font-size: 12px;
+}
 .kalam_vision .line{
-    width: 327px;
+    width: 447px;
 }
 .kalam_awards_wrap{
     gap: 33px;
@@ -830,6 +889,9 @@ z-index: 1;
 .kalam_contact_map{
     width: 399px;
     height: 230px;
+}
+.kalam_vision p{
+    font-size: 20px;
 }
 
 .kalam_contact_detai_box{
@@ -841,17 +903,29 @@ z-index: 1;
     width: 448px;
 }
 .text_overlap p {
-    top: -242px;
-    font-size: 30px;
-    width: 490px;
-    left: 177px;
+    top: -295px;
+    font-size: 50px;
+    width: 690px;
+    left: 110px;
 }
 .kalam_mixed_img_section{
-    width: 793px;
+    width: 893px;
     margin: auto;
 }
+.kalam_contact_detail p{
+    font-size: 20px;
+}
+.kalam_contact_data p{
+    font-size: 16px;
+}
+.kalam_contact_detail h2{
+    font-size: 50px;
+}
+.kalam_contact_detail .line{
+    width: 414px;
+}
 .kalam_vision_box {
-    height: 259.6px;
+    height: 269.6px;
     width: 199px;
     padding: 20px 10px;
 }
@@ -914,7 +988,7 @@ z-index: 1;
             height: 563px;
  }
  .kalam_left_text_section h1{
-    font-size: 45px;
+    font-size: 55px;
  }
  .kalam_left_text_section p{
     font-size: 18px;
@@ -922,12 +996,13 @@ z-index: 1;
  .kalam_left_text_section button{
     padding: 8px 26px;
     font-size: 18px;
+
  }
  .kalam_left_text_section{
-    width: 430px;
+            width: 489px;
  }
  .kalam_what_detail_section{
-    gap: 47px;
+    gap: 50px;
  }
  .kalam_right_section{
     width: 406px;
@@ -955,16 +1030,19 @@ z-index: 1;
     padding: 2rem 0px;
  }
  .kalam_content h2{
-    font-size: 35px;
+    font-size: 50px;
+ }
+ .kalam_content .line{
+    width: 344px;
  }
  .kalam_vision h2{
-    font-size: 35px;
+    font-size: 50px;
  }
  .kalam_journey h2 {
-    font-size: 35px;
+    font-size: 50px;
 }
 .kalam_journey .line{
-    width: 373px;
+    width: 550px;
 }
 }
 
