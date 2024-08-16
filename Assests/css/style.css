@@ -2361,6 +2361,9 @@ overflow: hidden;
         gap: 0;
         height: 638px;
     }
+    .kalam_web_hero_section{
+        height: auto;
+    }
     .kalam_buisness_form_video_section{
         padding-top: 0;
     }
