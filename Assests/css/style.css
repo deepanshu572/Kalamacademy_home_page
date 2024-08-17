@@ -2854,7 +2854,10 @@ overflow: hidden;
 .kalam_web_talent_student .line{
     width: 95vw;
 }
-@media (max-width: 600px) {
+
+@media (max-width: 600px) {.kalam_buisness_mix_content p{
+       text-align: unset !important;
+}
  .item2{
     position: unset;
  }
