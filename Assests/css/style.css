@@ -1115,9 +1115,12 @@ z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 52px;
+    gap: 71px;
     flex-wrap: wrap;
     
+}
+#digital .kalam_buisness_input_wrapper{
+    gap: 21px !important;
 }
 .kalam_buisness_feature_img {
     width: 135px;
@@ -1285,6 +1288,7 @@ height: 415px;
 }
 .kalam_buisness_success_story b{
     color: var(--theme-color);
+    /* text-transform: uppercase; */
 }
 .kalam_buisness_box{
     box-shadow: 0px 4.47px 27.92px 0px #F96D0440;
@@ -1747,7 +1751,17 @@ height: 415px;
 .web_p{
     font-size: 20px;
 }
+.hero_update{
+    height: 530px !important;
+
+}
 @media (max-width: 600px) {
+    #digital{
+        height: auto !important;
+    }
+    .hero_update{
+        height: 633px !important;
+    }
     .kalam_reuse_certificate_section{
         
     padding: 23px 0px;
@@ -2351,7 +2365,7 @@ overflow: hidden;
     height: 340px;
 }
 .kalam_Syllabus .line{
-    width: 48vw;
+    width: 46vw;
 }
 .kalam_reuse_certificate_section p{
     font-size: 20px;
@@ -2520,7 +2534,15 @@ overflow: hidden;
         width: 100%;
         height: 100%;
     }
-    
+    .kalam_benefits_section p{
+        font-size: unset;
+    }
+    #section4 p{
+        text-align: center;
+    }
+    .kalam_buisness_faq_section_wrap p{
+        text-align: unset;
+    }
     .kalam_navbar2 {
         position: fixed;
         display: unset;
@@ -2548,13 +2570,20 @@ overflow: hidden;
         align-items: center;
         justify-content: center;
         height: 228px;
+        gap:0 !important;
+    }
+    #list1 b{
+        text-transform: uppercase !important;
     }
     #list3 .slider__item{
         padding: 0;
-        width: 369px !important;
+        width: 269px !important;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    #list3 .slider__content{
+        width: 307px;
     }
     .kalam_navbar2 button {
         border: 2px solid #e4e4e4;
@@ -2774,17 +2803,28 @@ overflow: hidden;
     height: 100%;
 }
 #list3 .slider__content {
-    width: 350px;
-    height: 250px;
-    padding: 14px;
+    width: 377px;
+    height: 213px;
+    /* padding: 14px; */
     transform: scale(0.9);
+}
+.slider__wrapper3{
+    
+    overflow:unset!important;
+}
+#list3 {
+    display: flex;
+    gap: 82px;
 }
 #list3 .slider__content.active{
     box-shadow: unset;
     animation: unset;
-    transform: scale(1);
+    transform: scale(1.2);
 }
-
+.slider__controls_update{
+    position: relative;
+    top: -14px;
+}
 .kalam_web_house_img {
     width: 154px;
     box-shadow: 0px 7.23px 9.04px 0px #FA7F22CC;
