@@ -1741,13 +1741,38 @@ height: 415px;
 .kalam_web_career_section h2{
     font-size: 50px;
 }
-.kalam_web_career_section .line{
+.kalam_web_career_section .line{    
     width: 482px;
 }
 .web_p{
     font-size: 20px;
 }
 @media (max-width: 600px) {
+    .kalam_reuse_certificate_section{
+        
+    padding: 23px 0px;
+    }
+    .kalam_web_house_placement_section .line{
+        width:90vw !important;
+    }
+    .kalam_web_house_placement_section h2{
+        font-size:34px !important;
+    }
+    .kalam_web_career_section .line{
+        width: 320px;
+    }
+    .kalam_reuse_certificate_section h2{
+        font-size: 34px !important;
+    }
+    .kalam_web_career_box1 p{
+        font-size:17px;
+    }
+    .web_p{
+        font-size: unset;
+    }
+    .kalam_web_career_section h2 {
+        font-size: 35px;
+    }
     .kalam_buisness_mix_section{
         width: 90vw;
     }
@@ -1945,6 +1970,7 @@ height: 415px;
     font-size: 19px;
 }
 .kalam_buisness_input_wrapper{
+    gap: 16px !important;
     width: 95vw;
 
 }
@@ -2397,6 +2423,10 @@ overflow: hidden;
             top: -6px;
         }
 @media (max-width: 690px) {
+    
+    .kalam_digital_form_video_section .kalam_buisness_input_wrapper small{
+           position: unset;
+    }
    .kalam_digital_form_video_section .kalam_buisness_form_section {
         height: 515px;
     }
@@ -2544,7 +2574,7 @@ overflow: hidden;
         height: auto;
     }
     .kalam_buisness_form_video_section{
-        padding-top: 0;
+        padding: 0;
     }
     .kalam_benefits_section {
         padding: 0rem 0px;
@@ -2878,17 +2908,33 @@ overflow: hidden;
     width: 45vw;
  }
  .kalam_web_house_text h3 {
-    font-size: 14px;
+    font-size: 16px;
 }
 .kalam_web_house_text p {
-    font-size: 15px;
+    font-size: 12px;
     padding-top: 5px;
 }
 .kalam_web_house_placement_section{
-    padding-bottom: 0;
+    padding: 0;
+}
+.kalam_web_house_text{
+    padding-left: 0;
+    padding-right: 0;
+}
+.kalam_web_faq_section p{
+    font-size: unset;
+    text-align: center;
+}
+.kalam_web_house_box1{
+    
+    height: auto;
 }
 .kalam_reuse_partner_section_item{
     padding-top: 20px;
+}
+.kalam_web_house_img{
+    width: 104px;
+    height: 104px;
 }
 .kalam_web_talent_student h2{
     font-size: 26px;
