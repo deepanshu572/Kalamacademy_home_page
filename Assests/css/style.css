@@ -792,6 +792,9 @@ z-index: 1;
     }
 /* media query */
 @media (max-width: 2000px) and (min-width: 600px) {
+    .slider__controls_update{
+            left: 51px;
+    }
     .kalam_awards .line{
         width: 549px;
     }
@@ -3013,6 +3016,9 @@ overflow: hidden;
  }
  .kalam_web_house_text h3 {
     font-size: 16px;
+}
+.slider__wrapper{
+    gap:0;
 }
 .kalam_web_house_text p {
     font-size: 12px;
