@@ -347,6 +347,34 @@ body{
     width: 100%;
     height: 100%;
 }
+
+.kalam_content_iframe img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#navbar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+#navbar ul li a {
+    text-decoration: none;
+    color: black;
+}
+#navbar ul li a.active {
+    color: var(--theme-color); /* Change to whatever color you want */
+    text-decoration: underline;
+
+}
+#navbar ul li a.active {
+    color: var(--theme-color); /* Change to whatever color you want */
+    text-decoration: underline;
+
+}
+
 .kalam_text_content_section{
     display: flex;
     flex-direction: column;
@@ -498,7 +526,24 @@ body{
     width: 100%;
     height: 100%;
 }
-
+.box_item{
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    height: 100vh;
+    left: 0;
+    background: #0000002b;
+}
+.popup_item_box{
+    position: relative;
+    background: #0000002b;
+}
+.box_item svg{
+    width: 20px;
+    position: relative;
+    top: 72px;
+    left: 23px;
+}
 .kalam_contact_icons {
     box-shadow: 0px 4px 4px 0px #00000040;
     color: var(--theme-color);
@@ -1875,7 +1920,7 @@ height: 415px;
         width: 123px;
     }
     .kalam_buisness_banner_section h2 {
-        font-size: 18px !important;
+        font-size: 19px !important;
 
     }
     .kalam_banner_bottom button{
@@ -2835,6 +2880,7 @@ overflow: hidden;
 .kalam_web_house_img img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .kalam_web_house_text {
     display: flex;
@@ -2897,7 +2943,19 @@ overflow: hidden;
 .kalam_web_talent_student .line{
     width: 95vw;
 }
-
+.box_item_img{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box_item_img img{
+    width: 411px;
+    height: 242px;
+}
+#hide{
+    display: none;
+}
 @media (max-width: 600px) {.kalam_buisness_mix_content p{
        text-align: unset !important;
 }
@@ -2989,6 +3047,29 @@ overflow: hidden;
     padding: 0px 4px;
     width: auto;
 }
+#navbar ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 7px 11px;
+    border: 1px solid var(--theme-color);
+    border-radius: 24px;
+    font-size: 14px;
+
+}
+#navbar ul{
+    padding: 10px 6px;
+    gap: 8px;
+}
+#navbar ul li a.active {
+    background-color: var(--theme-color); /* Change to whatever color you want */
+    text-decoration: none;
+    color: #fff;
+
+
+}
+}
+.update_foot{
+    padding-bottom: 15px;
 }
 /* Web development PAGE CSS */
 
@@ -3032,3 +3113,7 @@ font-size: 15px;
 .dropdown-content a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content {display: block;}
+
+
+
+

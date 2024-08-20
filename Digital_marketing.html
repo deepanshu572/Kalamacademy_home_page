@@ -27,13 +27,14 @@
            
         </div>
     </div>
-        <div class="kalam_navbar2">
-          <button class="scrollButton" data-target="section1">Student Review</button>
-          <button class="scrollButton" data-target="section2">Syllabus</button>
-          <button class="scrollButton" data-target="section3">Placements</button>
-          <button class="scrollButton" data-target="section4">F.A.Q</button>
-
-        </div>
+         <nav id="navbar" class="kalam_navbar2">
+          <ul>
+              <li><a href="#section1">Student Review</a></li>
+              <li><a href="#section2">Syllabus</a></li>
+              <li><a href="#section3">Placements</a></li>
+              <li><a href="#section4">F.A.Q</a></li>
+          </ul>
+      </nav>
         <div class="kalam_buisness_hero_section kalam_digital_hero_section hero_update" >
             <div class="kalam_buisness_left">
                 <div class="kalam_buisness_top">
@@ -42,7 +43,7 @@
                 <p>We help you with everything that will grow your business with the help of digital marketing.</p>
             </div>
             <div class="kalam_buisness_bottom">
-             <a href="#form_box"><button>FREE COUNSELLING</button></a>
+             <a href="#form_box"><button>FREE CONSULTANCY</button></a>
             </div>
             </div>
             <div class="kalam_buisness_right">
@@ -90,11 +91,11 @@
         <div id="form_box"></div>
         <div class="kalam_buisness_form_video_section kalam_digital_form_video_section">
           <div class="kalam_buisness_video_section">
-            <div id="player4"></div>
+            <div id="player9"></div>
           </div>
           <div class="kalam_buisness_form_section" id="digital">
                 <div class="kalam_buisness_input_wrapper">
-                  <h2>REGISTER FOR FREE COUNSELLING</h2>
+                  <h2>REGISTER FOR FREE CONSULTANCY</h2>
 
                   <div class="kalam_buisness_form1">
                     <label for="Full Name">Full Name</label>
@@ -109,7 +110,7 @@
                     <input type="text" placeholder="Enter your number">
                   </div>
                  
-                   <button>FREE COUNSELLING</button>
+                   <button>FREE CONSULTANCY</button>
                    <small><b>Kalam Academy Ranchi</b> is on the list of 100 promising startups recognized by <u>Google</u> </small>
                 </div>
           </div>
@@ -156,8 +157,7 @@
             </div>
           </div>
         </div>
-        <div id="section1"></div>
-        <div class="kalam_buisness_success_story kalam_digital_success_story">
+        <div class="kalam_buisness_success_story kalam_digital_success_story" id="section1">
             <h2>Digital Marketing Training In Ranchi : <b>Success Stories</b><div class="line"></div></h2>
             <div class="slider__wrapper slider__wrapper3">
               <div id="list3" class="slider__list">
@@ -485,7 +485,7 @@
                 </div>
                 <div class="kalam_benefits_text">
                   <p>
-                    • You can get a good job.</p>
+                    • You can be a freelancer</p>
                 </div>
               </div>
               <div class="kalam_benefits_box1">
@@ -509,10 +509,10 @@
             </div>
           </div>
           <div class="kalam_buisness_banner_section">
-            <h2>Need Digital Marketing For Business?</h2>
+            <h2>Ranchi’s First Practical Training Center</h2>
             <div class="kalam_banner_bottom">
             <p>Register For </p>
-          <a href="#form_box"><button>FREE COUNSELLING</button></a>
+          <a href="#form_box"><button>FREE CONSULTANCY</button></a>
           </div>
         </div>    
       
@@ -533,10 +533,9 @@
             <button id="arrowRight2"></button>
         </div>
         <div id="itemNumberMess2"></div>
-    <div id="section3"></div>
         </div>
         
-        <div class="kalam_reuse_partner_section">
+        <div class="kalam_reuse_partner_section" id="section3">
           <h2><b>Placement Partner : </b> For Digital Marketing Course In Ranchi</h2>
           <div class="line"></div>
           <div class="kalam_reuse_partner_section_item">
@@ -818,13 +817,34 @@
           <div class="kalam_awards">
             <h2><b>Awards</b> & <b>Achievements</b></h2>
             <div class="line"></div>
-            <div class="kalam_awards_wrap">
+            <div class="kalam_awards_wrap">   
+              <div class="popup_item_box" id="hide">
+                    <div class="box_item">
+                      <svg id="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                      <div class="box_item_img" id="popupData">
+                        <!-- <img src="Assests/img/cup.png" alt=""> -->
+                      </div>
+                    </div>
+               </div>
+              <div class="award_popup" onclick="Poppup(0)">
                 <img src="Assests/img/kalam_achievement1.png" alt="kalam_home_png">
+             
+              </div>
+              <div class="award_popup" onclick="Poppup(1)">
                 <img class="big" src="Assests/img/kalam_achievement2.png" alt="kalam_home_png">
+              </div>
+                <div class="award_popup" onclick="Poppup(2)">
                 <img src="Assests/img/kalam_achievement3.png" alt="kalam_home_png">
+              </div>
+                <div class="award_popup" onclick="Poppup(3)">
                 <img src="Assests/img/kalam_achievement4.png" alt="kalam_home_png">
+              </div>
+                <div class="award_popup" onclick="Poppup(4)">
                 <img class="big" src="Assests/img/kalam_achievement5.png" alt="kalam_home_png">
+              </div>
+                <div class="award_popup" onclick="Poppup(5)">
                 <img src="Assests/img/kalam_achievement6.png" alt="kalam_home_png">
+              </div>
             </div>
         </div>
           <div class="kalam_footer">
@@ -929,7 +949,7 @@
           <div class="foot-last">
               <div class="foot-last-icon1 ancor-wrap">
                 <a class="ancor-demo" href="#form_box" aria-label="ancor_demo">
-                  <p>FREE COUNSELLING</p>
+                  <p>FREE CONSULTANCY</p>
                 </a>
               </div>
               <div class="foot-last-icon1">

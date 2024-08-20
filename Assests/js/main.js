@@ -1,3 +1,62 @@
+          
+          document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("div[id]");
+            const navLinks = document.querySelectorAll("#navbar ul li a");
+        
+            const observerOptions = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.5 // Adjust the threshold as needed
+            };
+        
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    const id = entry.target.id;
+                    const navLink = document.querySelector(`#navbar ul li a[href="#${id}"]`);
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => link.classList.remove("active"));
+                        navLink.classList.add("active");
+                    }
+                });
+            }, observerOptions);
+        
+            sections.forEach(section => observer.observe(section));
+        });
+const popupdata = [
+   {
+    "imgUrl":"Assests/img/cup.png"
+   },
+   {
+    "imgUrl":"Assests/img/kalam_webapp1.png"
+   },
+   {
+    "imgUrl":"Assests/img/cup.png"
+   },
+   {
+    "imgUrl":"Assests/img/cup.png"
+   }
+]
+
+function Poppup(i) {
+    var item = document.getElementById('popupData');
+    item.innerHTML = `<img src="${popupdata[i].imgUrl}" alt="">`  
+}
+var btns = document.querySelectorAll('.award_popup');
+var btnsBox = document.getElementById('hide');
+var close = document.getElementById('close');
+
+btns.forEach(function(btn) {
+    btn.addEventListener("click", function(){
+        btnsBox.style.display = "block";
+    });
+});
+
+close.addEventListener("click", function(){
+    btnsBox.style.display = "none";
+});
+
+    
+
 // iframe YT code start
 
 let ashInterval;
@@ -7,13 +66,13 @@ const players = [
     { id: 'player1', videoId: 'JFtMkRVQ-fo', player: null },
     { id: 'player2', videoId: '1ZV4k1_kAek', player: null },
     { id: 'player3', videoId: '79annCWsSdU', player: null },
-    { id: 'player4', videoId: 'WNxRRzslAVE', player: null },
+    { id: 'player4', videoId: 'T9jmlMcNJHk', player: null },
     { id: 'player5', videoId: 'wuFP8fGU2p0', player: null },
     { id: 'player6', videoId: 'QSUYiF8xrNM', player: null },
     { id: 'player7', videoId: 'WNxRRzslAVE', player: null },
-    { id: 'player8', videoId: 'cld4S71OAfw', player: null }
+    { id: 'player8', videoId: 'LJ8_WJp2SAk', player: null },
+    { id: 'player9', videoId: 'eXoArxAMZZk', player: null }
 
-    
 ];
 
 function onYouTubeIframeAPIReady() {
@@ -446,3 +505,8 @@ initializeSlider('.slider__wrapper1', '#list1', '#arrowRight1', '#arrowLeft1', '
 initializeSlider('.slider__wrapper2', '#list2', '#arrowRight2', '#arrowLeft2', '#itemNumber2', '#itemNumberMess2');
 // Initialize the second slider
 initializeSlider('.slider__wrapper3', '#list3', '#arrowRight3', '#arrowLeft3', '#itemNumber3', '#itemNumberMess3');
+
+
+
+
+
