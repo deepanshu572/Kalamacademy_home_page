@@ -339,6 +339,164 @@ initializeSlider('.slider__wrapper2', '#list2', '#arrowRight2', '#arrowLeft2', '
 initializeSlider('.slider__wrapper3', '#list3', '#arrowRight3', '#arrowLeft3', '#itemNumber3', '#itemNumberMess3');
 
 
+// function initializeSlider(wrapperSelector, listSelector, arrowRightSelector, arrowLeftSelector, valueItemNumberSelector, itemNumberMessSelector) {
+//     const wrapper = document.querySelector(wrapperSelector);
+//     const list = document.querySelector(listSelector);
+//     const arrowRight = document.querySelector(arrowRightSelector);
+//     const arrowLeft = document.querySelector(arrowLeftSelector);
+//     const valueItemNumber = document.querySelector(valueItemNumberSelector);
+//     const itemNumberMess = document.querySelector(itemNumberMessSelector);
+
+//     const defaultItemNumber = 3;
+//     const initialNumberItems = list.children.length;
+//     const numVisibleItems = 3;
+//     let centralItem = 2;
+//     let itemNumberValue = parseInt(valueItemNumber.value) || defaultItemNumber;
+//     let itemNumber = calculatePercentItemNumber(itemNumberValue);
+//     let isDragging = false;
+//     let startPos = 0;
+//     let currentTranslate = 0;
+//     let prevTranslate = 0;
+//     let animationID;
+
+//     resetItems(itemNumber);
+
+//     function calculatePercentItemNumber(num) {
+//         return num ? 100 / num : 100 / defaultItemNumber;
+//     }
+
+//     function listNumber(inputNumber) {
+//         const message = inputNumber >= 6
+//             ? "You reached the maximum number of items"
+//             : `Changed to ${inputNumber}`;
+//         itemNumberMess.textContent = message;
+//     }
+
+//     function resetItems(number) {
+//         const sliderItems = list.querySelectorAll(".slider__item");
+//         sliderItems.forEach((item) => (item.style.width = `${number}%`));
+//         itemNumber = number;
+//     }
+
+//     function calculateCentralItem(numVisibleItems) {
+//         return Math.ceil(numVisibleItems / 2);
+//     }
+
+//     function addActiveElement(centralItem, totalVisibleItems) {
+//         const sliderItems = list.querySelectorAll(".slider__item");
+//         sliderItems.forEach((item) =>
+//             item.querySelector(".slider__content").classList.remove("active")
+//         );
+
+//         const central = sliderItems[Math.floor(centralItem)];
+//         central.querySelector(".slider__content").classList.add("active");
+
+//         if (totalVisibleItems % 2 === 0) {
+//             const central2 = sliderItems[Math.floor(centralItem) + 1];
+//             central2.querySelector(".slider__content").classList.add("active");
+
+//             if (totalVisibleItems == 2) {
+//                 const central3 = sliderItems[Math.floor(centralItem) - 1];
+//                 central3.querySelector(".slider__content").classList.add("active");
+//             }
+//         }
+//     }
+
+//     valueItemNumber.addEventListener("input", function () {
+//         itemNumberValue = parseInt(valueItemNumber.value);
+//         listNumber(itemNumberValue);
+//         const newPercentage = calculatePercentItemNumber(itemNumberValue);
+//         resetItems(newPercentage);
+//         centralItem = calculateCentralItem(itemNumberValue);
+//         addActiveElement(centralItem - 1, itemNumberValue);
+//     });
+
+//     arrowRight.addEventListener("click", moveFirstToEnd);
+//     arrowLeft.addEventListener("click", moveLastToStart);
+
+//     function moveFirstToEnd() {
+//         const firstItem = list.firstElementChild;
+//         firstItem.style.marginLeft = `calc(-${itemNumber}%)`;
+
+//         if (firstItem) {
+//             setTimeout(() => {
+//                 firstItem.style.marginLeft = "";
+//                 list.appendChild(firstItem);
+//             }, 300);
+//         }
+//         addActiveElement(centralItem, itemNumberValue);
+//     }
+
+//     function moveLastToStart() {
+//         const lastItem = list.lastElementChild;
+//         list.removeChild(lastItem);
+//         list.insertBefore(lastItem, list.firstElementChild);
+//         const newFirstItem = list.firstElementChild;
+
+//         if (newFirstItem) {
+//             newFirstItem.style.marginLeft = `calc(-${itemNumber}%)`;
+//             setTimeout(() => {
+//                 newFirstItem.style.marginLeft = "";
+//             }, 1);
+//         }
+
+//         addActiveElement(centralItem - 1, itemNumberValue);
+//     }
+
+//     // Adding grab feature
+//     wrapper.addEventListener('mousedown', dragStart);
+//     wrapper.addEventListener('mouseup', dragEnd);
+//     wrapper.addEventListener('mouseleave', dragEnd);
+//     wrapper.addEventListener('mousemove', dragMove);
+
+//     wrapper.addEventListener('touchstart', dragStart);
+//     wrapper.addEventListener('touchend', dragEnd);
+//     wrapper.addEventListener('touchmove', dragMove);
+
+//     function dragStart(event) {
+//         isDragging = true;
+//         startPos = getPositionX(event);
+//         animationID = requestAnimationFrame(animation);
+//         wrapper.classList.add('grabbing');
+//     }
+
+//     function dragMove(event) {
+//         if (isDragging) {
+//             const currentPosition = getPositionX(event);
+//             currentTranslate = prevTranslate + currentPosition - startPos;
+//         }
+//     }
+
+//     function dragEnd() {
+//         isDragging = false;
+//         cancelAnimationFrame(animationID);
+//         prevTranslate = currentTranslate;
+//         wrapper.classList.remove('grabbing');
+//     }
+
+//     function getPositionX(event) {
+//         return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+//     }
+
+//     function animation() {
+//         setSliderPosition();
+//         if (isDragging) requestAnimationFrame(animation);
+//     }
+
+//     function setSliderPosition() {
+//         list.style.transform = `translateX(${currentTranslate}px)`;
+//     }
+// }
+
+// // Initialize the first slider
+// initializeSlider('.slider__wrapper1', '#list1', '#arrowRight1', '#arrowLeft1', '#itemNumber1', '#itemNumberMess1');
+
+// // Initialize the second slider
+// initializeSlider('.slider__wrapper2', '#list2', '#arrowRight2', '#arrowLeft2', '#itemNumber2', '#itemNumberMess2');
+
+// // Initialize the third slider
+// initializeSlider('.slider__wrapper3', '#list3', '#arrowRight3', '#arrowLeft3', '#itemNumber3', '#itemNumberMess3');
+
 
 
 

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .slider {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 50px auto 0;
+            user-select: none;
+            touch-action: pan-y;
+            
+        }
+
+        .slider img {
+            pointer-events: none;
+        }
+
+        .slider-list {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .slider-list.grab {
+            cursor: grab;
+        }
+
+        .slider-list.grabbing {
+            cursor: grabbing;
+        }
+
+        .slider-track {
+            display: flex;
+            transform: translate3d(-200px, 0px, 0px);
+        }
+
+        .slide {
+            width: 200px;
+            height: 200px;
+            flex-shrink: 0;
+            font-size: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #000;
+        }
+
+        .slider-arrows {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .next, .prev {
+            background: none;
+            border: none;
+            margin: 0 10px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .next.disabled, .prev.disabled {
+            opacity: .25;
+            pointer-events: none;
+        }
+
+        .active {
+            background-color: #f0f0f0; /* Style the active slide as needed */
+            border-color: #ff0000; /* Example active style */
+            scale: 1.2;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slider-list">
+            <div class="slider-track">
+                <div class="slide">1</div>
+                <div class="slide active">2</div>
+                <div class="slide">3</div>
+                <div class="slide">4</div>
+                <div class="slide">5</div>
+            </div>
+        </div>
+        <div class="slider-arrows">
+            <button type="button" class="prev">&larr;</button>
+            <button type="button" class="next">&rarr;</button>
+        </div>
+    </div>
+    <script>
+        let slider = document.querySelector('.slider'),
+            sliderList = slider.querySelector('.slider-list'),
+            sliderTrack = slider.querySelector('.slider-track'),
+            slides = slider.querySelectorAll('.slide'),
+            arrows = slider.querySelector('.slider-arrows'),
+            prev = arrows.children[0],
+            next = arrows.children[1],
+            slideWidth = slides[0].offsetWidth,
+            slideIndex = 0,
+            posInit = 0,
+            posX1 = 0,
+            posX2 = 0,
+            posY1 = 0,
+            posY2 = 0,
+            posFinal = 0,
+            isSwipe = false,
+            isScroll = false,
+            allowSwipe = true,
+            transition = true,
+            nextTrf = 0,
+            prevTrf = 0,
+            lastTrf = --slides.length * slideWidth,
+            posThreshold = slides[0].offsetWidth * 0.35,
+            trfRegExp = /([-0-9.]+(?=px))/,
+            swipeStartTime,
+            swipeEndTime,
+            getEvent = function () {
+                return (event.type.search('touch') !== -1) ? event.touches[0] : event;
+            },
+            slide = function () {
+                if (transition) {
+                    sliderTrack.style.transition = 'transform .5s';
+                }
+                sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0px, 0px)`;
+
+                prev.classList.toggle('disabled', slideIndex === 0);
+                next.classList.toggle('disabled', slideIndex === --slides.length);
+
+                updateActiveClass(); // Update active class after slide change
+            },
+            swipeStart = function () {
+                let evt = getEvent();
+
+                if (allowSwipe) {
+
+                    swipeStartTime = Date.now();
+
+                    transition = true;
+
+                    nextTrf = (slideIndex + 1) * -slideWidth;
+                    prevTrf = (slideIndex - 1) * -slideWidth;
+
+                    posInit = posX1 = evt.clientX;
+                    posY1 = evt.clientY;
+
+                    sliderTrack.style.transition = '';
+
+                    document.addEventListener('touchmove', swipeAction);
+                    document.addEventListener('mousemove', swipeAction);
+                    document.addEventListener('touchend', swipeEnd);
+                    document.addEventListener('mouseup', swipeEnd);
+
+                    sliderList.classList.remove('grab');
+                    sliderList.classList.add('grabbing');
+                }
+            },
+            swipeAction = function () {
+
+                let evt = getEvent(),
+                    style = sliderTrack.style.transform,
+                    transform = +style.match(trfRegExp)[0];
+
+                posX2 = posX1 - evt.clientX;
+                posX1 = evt.clientX;
+
+                posY2 = posY1 - evt.clientY;
+                posY1 = evt.clientY;
+
+                if (!isSwipe && !isScroll) {
+                    let posY = Math.abs(posY2);
+                    if (posY > 7 || posX2 === 0) {
+                        isScroll = true;
+                        allowSwipe = false;
+                    } else if (posY < 7) {
+                        isSwipe = true;
+                    }
+                }
+
+                if (isSwipe) {
+                    if (slideIndex === 0) {
+                        if (posInit < posX1) {
+                            setTransform(transform, 0);
+                            return;
+                        } else {
+                            allowSwipe = true;
+                        }
+                    }
+
+                    if (slideIndex === --slides.length) {
+                        if (posInit > posX1) {
+                            setTransform(transform, lastTrf);
+                            return;
+                        } else {
+                            allowSwipe = true;
+                        }
+                    }
+
+                    if (posInit > posX1 && transform < nextTrf || posInit < posX1 && transform > prevTrf) {
+                        reachEdge();
+                        return;
+                    }
+
+                    sliderTrack.style.transform = `translate3d(${transform - posX2}px, 0px, 0px)`;
+                }
+
+            },
+            swipeEnd = function () {
+                posFinal = posInit - posX1;
+
+                isScroll = false;
+                isSwipe = false;
+
+                document.removeEventListener('touchmove', swipeAction);
+                document.removeEventListener('mousemove', swipeAction);
+                document.removeEventListener('touchend', swipeEnd);
+                document.removeEventListener('mouseup', swipeEnd);
+
+                sliderList.classList.add('grab');
+                sliderList.classList.remove('grabbing');
+
+                if (allowSwipe) {
+                    swipeEndTime = Date.now();
+                    if (Math.abs(posFinal) > posThreshold || swipeEndTime - swipeStartTime < 300) {
+                        if (posInit < posX1) {
+                            slideIndex--;
+                        } else if (posInit > posX1) {
+                            slideIndex++;
+                        }
+                    }
+
+                    if (posInit !== posX1) {
+                        allowSwipe = false;
+                        slide();
+                    } else {
+                        allowSwipe = true;
+                    }
+
+                } else {
+                    allowSwipe = true;
+                }
+
+            },
+            setTransform = function (transform, comapreTransform) {
+                if (transform >= comapreTransform) {
+                    if (transform > comapreTransform) {
+                        sliderTrack.style.transform = `translate3d(${comapreTransform}px, 0px, 0px)`;
+                    }
+                }
+                allowSwipe = false;
+            },
+            reachEdge = function () {
+                transition = false;
+                swipeEnd();
+                allowSwipe = true;
+            };
+
+        const updateActiveClass = function () {
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === slideIndex);
+            });
+        };
+
+        sliderTrack.style.transform = 'translate3d(0px, 0px, 0px)';
+        sliderList.classList.add('grab');
+
+        sliderTrack.addEventListener('transitionend', () => allowSwipe = true);
+        slider.addEventListener('touchstart', swipeStart);
+        slider.addEventListener('mousedown', swipeStart);
+
+        arrows.addEventListener('click', function () {
+            let target = event.target;
+
+            if (target.classList.contains('next')) {
+                slideIndex++;
+            } else if (target.classList.contains('prev')) {
+                slideIndex--;
+            } else {
+                return;
+            }
+
+            slide();
+        });
+
+        updateActiveClass(); // Initial call to set the active class
+    </script>
+</body>
+</html>
